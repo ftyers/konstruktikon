@@ -1,0 +1,52 @@
+<LexicalResource dtdVersion="16">
+    <GlobalInformation>
+        <feat att="languageCoding" val="ISO 639-3"/>
+    </GlobalInformation>
+    <Lexicon xmlns:swedberg-mfl="http://spraakbanken.gu.se/swe/resurs/swedberg-mfl" xmlns:rusfn="http://spraakbanken.gu.se/swe/resurs/rusfn" xmlns:dalin-mfl="http://spraakbanken.gu.se/swe/resurs/dalin-mfl" xmlns:karp="http://spraakbanken.gu.se/eng/research/infrastructure/karp/karp" xmlns:konst="http://spraakbanken.gu.se/swe/resurs/konstruktikon">
+        <feat att="language" val="rus"/>
+        <LexicalEntry xml:lang="rus">
+            <Lemma/>
+            <Sense id="konstruktikon--чем_тем">
+                <karp:example>
+                    <karp:text>Мы просто хотели записаться и выйти на путь и</karp:text>
+                    <karp:e name="чем_тем">
+                        <karp:e name="cee">Чем</karp:e>
+                        <karp:text/>
+                        <karp:e name="Property">быстрее</karp:e>
+                        <karp:text>,</karp:text>
+                        <karp:e name="cee">тем</karp:e>
+                        <karp:text/>
+                        <karp:e name="Property">лучше</karp:e>
+                        <karp:text/>
+                    </karp:e>
+                    <karp:text>!</karp:text>
+                </karp:example>
+                <konst:int_const_elem name="чем..1" cat="Adv" lu="чем..1"/>
+                <konst:int_const_elem name="тем..1" cat="Adv" lu="тем..1"/>
+                <konst:int_const_elem name="Property" cat="AP" role="Property"/>
+                <konst:int_const_elem role="Event" name="Event" cat="VP"/>
+                <konst:int_const_elem name="Entity" cat="NP" role="Entity"/>
+                <feat att="type" val="konstruktion"/>
+                <feat att="cat" val="S"/>
+                <feat att="structure" val="[чем..2 Adj,,comp (XP) тем..1 Adj,,comp (XP)]  | [ju..2 &#34;mer&#34;|&#34;mindre&#34; XP desto..1 &#34;mer&#34;|&#34;mindre&#34; XP]"/>
+                <feat att="cee" val="чем..2"/>
+                <feat att="cee" val="тем..1"/>
+                <feat att="coll" val="больше..1"/>
+                <feat att="coll" val="lite..1"/>
+                <feat att="comment" val="Det förekommer också varianter av konstruktionen där man i stället för &#34;ju ... desto&#34; använder &#34;ju ... ju&#34; eller &#34;desto ... desto&#34;."/>
+                <feat att="type" val="jämförelse"/>
+                <feat att="evokes" val="Change_position_on_a_scale"/>
+                <feat att="illustration" val="чем больше тем лучше"/>
+                <feat att="entry_status" val="Development"/>
+                <feat att="createdBy" val="francis.tyers@uit.no"/>
+                <definition>
+                    <karp:text>Konstruktionen uttrycker ett proportionerligt samband mellan två eller flera led. En gradökning eller -minskning av</karp:text>
+                    <karp:e name="Property">ett sakförhållande</karp:e>
+                    <karp:text>i det/de inledande ledet/leden, som inleds med "ju", sägs leda till motsvarande gradförändring av</karp:text>
+                    <karp:e name="Property">ett jämförbart sakförhållande</karp:e>
+                    <karp:text>i det avslutande ledet, som inleds med "desto". Om leden är satsformade har inledande led bisatsordföljd (af), medan det avslutande ledet har huvudsatsordföljd (fa).</karp:text>
+                </definition>
+            </Sense>
+        </LexicalEntry>
+    </Lexicon>
+</LexicalResource>
