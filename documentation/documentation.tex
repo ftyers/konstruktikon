@@ -6,6 +6,7 @@
 
 \usepackage{fontspec}
 \usepackage{xunicode}
+\usepackage{longtable}
 
 \setmainfont{Times New Roman}
 \newfontfamily\ll[]{Linux Libertine O}
@@ -51,7 +52,8 @@ Open class words:
 
 \begin{tabular}{ll}
    \gmk{adj} &    \\
-   \gmk{adv} & \emph{Германские войска \underline{быстро} продвигались вперёд и к 1942 году вышли к Северному Кавказу.}  \\
+   \multirow{2}{*}{\gmk{adv}} & «\emph{Германские войска \underline{быстро} продвигались вперёд} \\
+                              & ~~\emph{и к 1942 году вышли к Северному Кавказу.}» \\
    \gmk{intj} &  \\
    \gmk{noun} &  \\
    \gmk{propn} &  \\
@@ -79,6 +81,22 @@ Other:
 
 \section{Phrasal categories}
 
+\begin{tabular}{lll}
+
+\multirow{2}{*}{NP} & & \\
+                    & & \\
+\multirow{2}{*}{VP} & & \\
+                    & & \\
+\multirow{2}{*}{AP} & & \\
+                    & & \\
+\multirow{2}{*}{AdvP} & & \\
+                    & & \\
+\multirow{2}{*}{PP} & & \\
+                    & & \\
+\multirow{2}{*}{XP} & & \\
+                    & & \\
+\end{tabular}
+
 \section{Dependency relations}
 
 The dependency relations in the constructicon are based on Universal Dependencies.\footnote{\url{http://}}
@@ -98,13 +116,174 @@ The dependency relations in the constructicon are based on Universal Dependencie
 \end{figure}
 
 \section{Semantic roles}
+\label{sec:semroles}
 
+\begin{longtable}{ p{.20\textwidth}  p{.80\textwidth} } 
+\toprule
+ \multirow{2}{*}{Actant} & ~ \\ 
+        & ~ \\
+\midrule
+ \multirow{2}{*}{Action} & ~ \\ 
+        & ~ \\
+\midrule
+ \multirow{2}{*}{Activity} & ~ \\ 
+        & ~ \\
+\midrule
+ \multirow{2}{*}{Actor} & ~ \\ 
+        & ~ \\
+\midrule
+ \multirow{3}{*}{Agent} & Refers to the initiator of an event. \\ 
+        & [Вася]$_{Agent}$ ловит рыбу. \\
+        & Рыба ловится [Васей]$_{Agent}$ \\
+\midrule
+ \multirow{2}{*}{Associated} & ~ \\ 
+        & ~ \\
+\midrule
+ \multirow{2}{*}{BaseOfPredication} & ~ \\ 
+        & ~ \\
+\midrule
+ \multirow{2}{*}{Beneficiary} & ~ \\ 
+        & ~ \\
+\midrule
+ \multirow{2}{*}{Cause} & ~ \\ 
+        & ~ \\
+\midrule
+ \multirow{2}{*}{Circumstance} & ~ \\ 
+        & ~ \\
+\midrule
+ \multirow{2}{*}{Class} & ~ \\ 
+        & ~ \\
+\midrule
+ \multirow{2}{*}{Concerning} & ~ \\ 
+        & ~ \\
+\midrule
+ \multirow{2}{*}{Condition} & ~ \\ 
+        & ~ \\
+\midrule
+ \multirow{2}{*}{Context} & ~ \\ 
+        & ~ \\
+\midrule
+ \multirow{2}{*}{Corresponding} & ~ \\ 
+        & ~ \\
+\midrule
+ \multirow{2}{*}{Direction} & ~ \\ 
+        & ~ \\
+\midrule
+ \multirow{2}{*}{Distance} & ~ \\ 
+        & ~ \\
+\midrule
+ \multirow{2}{*}{Entity} & ~ \\ 
+        & ~ \\
+\midrule
+ \multirow{2}{*}{Evaluation} & ~ \\ 
+        & ~ \\
+\midrule
+ \multirow{2}{*}{Event} & ~ \\ 
+        & ~ \\
+\midrule
+ \multirow{2}{*}{Experiencer} & ~ \\ 
+        & ~ \\
+\midrule
+ \multirow{2}{*}{Function} & ~ \\ 
+        & ~ \\
+\midrule
+ \multirow{2}{*}{Goal} & ~ \\ 
+        & ~ \\
+\midrule
+ \multirow{2}{*}{Instrument} & ~ \\ 
+        & ~ \\
+\midrule
+ \multirow{2}{*}{Landmark} & ~ \\ 
+        & ~ \\
+\midrule
+ \multirow{2}{*}{Location} & ~ \\ 
+        & ~ \\
+\midrule
+ \multirow{2}{*}{Locative} & ~ \\ 
+        & ~ \\
+\midrule
+ \multirow{2}{*}{Manner} & ~ \\ 
+        & ~ \\
+\midrule
+ \multirow{2}{*}{Material} & ~ \\ 
+        & ~ \\
+\midrule
+ \multirow{2}{*}{Object} & ~ \\ 
+        & ~ \\
+\midrule
+ \multirow{2}{*}{Part} & ~ \\ 
+        & ~ \\
+\midrule
+ \multirow{2}{*}{Participant} & ~ \\ 
+        & ~ \\
+\midrule
+ \multirow{2}{*}{Path} & ~ \\ 
+        & ~ \\
+\midrule
+ \multirow{2}{*}{Patient} & ~ \\ 
+        & ~ \\
+\midrule
+ \multirow{2}{*}{Phenomenon} & ~ \\ 
+        & ~ \\
+\midrule
+ \multirow{2}{*}{Property} & ~ \\ 
+        & ~ \\
+\midrule
+ \multirow{2}{*}{Purpose} & ~ \\ 
+        & ~ \\
+\midrule
+ \multirow{2}{*}{Quantitative} & ~ \\ 
+        & ~ \\
+\midrule
+ \multirow{2}{*}{Recipient} & ~ \\ 
+        & ~ \\
+\midrule
+ \multirow{2}{*}{Requirement} & ~ \\ 
+        & ~ \\
+\midrule
+ \multirow{2}{*}{Result} & ~ \\ 
+        & ~ \\
+\midrule
+ \multirow{2}{*}{Situation} & ~ \\ 
+        & ~ \\
+\midrule
+ \multirow{2}{*}{Source} & ~ \\ 
+        & ~ \\
+\midrule
+ \multirow{2}{*}{State} & ~ \\ 
+        & ~ \\
+\midrule
+ \multirow{2}{*}{Theme} & ~ \\ 
+        & ~ \\
+\midrule
+ \multirow{2}{*}{Trajector} & ~ \\ 
+        & ~ \\
+\midrule
+ \multirow{2}{*}{Undergoer} & ~ \\ 
+        & ~ \\
+\bottomrule
+\caption{List of semantic roles}
+\label{table:semroles}
+\end{longtable}
 
 \section{Naming constructions}
+\label{sec:name}
 
 % when X/Y/NP/etc.
 
-\section{Structure of constructicon}
+\section{The structure of the constructicon}
+
+\begin{description}
+  \item[Name] This is the name of the construction (see §\ref{sec:name}).
+  \item[Illustration] This is a short/minimal example of the construction.
+  \item[Berkeley ID] ~
+  \item[Type]
+  \item[Category] This is the resulting syntactic category of the construction.
+  \item[FrameNet] The FrameNet frame invoked by the construction (if applicable).
+  \item[Definition] A free text definition in Russian. The parts of the definition 
+      corresponding to construction elements are tagged with the appropriate semantic role (see §\ref{sec:semroles})
+  \item[Structure] A structure sketch
+\end{description}
 
 % what are "Keywords": parts of the construction
 
