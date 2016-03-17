@@ -105,18 +105,23 @@ The dependency relations in the constructicon are based on Universal Dependencie
 \centering
         \begin{dependency}[theme = simple, font = \small]
            \begin{deptext}[column sep=0.2cm]
-                         \_ \& с \& \_                \\
-                         \gmk{pron} \& \gmk{adp} \& \_        \\
-                         \gmk{PronType=Pers|Number=Plur} \& \_ \& \gmk{Case=Ins} \\
+                     ~ \&   \_ \& с \& \_                \\
+                     POS:  \&  \gmk{PRON} \& \gmk{ADPOS} \& \_        \\
+                     PronType:  \& \gmk{Pers} \& \_ \& \_ \\
+                     Number: \& \gmk{Plur} \& \_ \& \_ \\
+                     Case: \& \_ \& \_ \& \gmk{Ins} \\
                 \end{deptext}
-                \deproot[edge unit distance=1.3ex]{1}{\udlabel{x}}
-                \depedge{3}{2}{\udlabel{case}}
-                \depedge{1}{3}{\udlabel{nmod}}
+                \deproot[edge unit distance=1.3ex]{2}{\udlabel{x}}
+                \depedge{4}{3}{\udlabel{case}}
+                \depedge{2}{4}{\udlabel{nmod}}
         \end{dependency}
 \end{figure}
 
 \section{Semantic roles}
 \label{sec:semroles}
+
+Definitions of semantic roles have been taken from various sources.
+% http://www-01.sil.org/linguistics/GlossaryOfLinguisticTerms/
 
 \begin{longtable}{ p{.20\textwidth}  p{.80\textwidth} } 
 \toprule
@@ -139,10 +144,13 @@ The dependency relations in the constructicon are based on Universal Dependencie
  \multirow{2}{*}{BaseOfPredication} & ~ \\ 
         & ~ \\
 \midrule
- \multirow{2}{*}{Beneficiary} & ~ \\ 
-        & ~ \\
+ \multirow{2}{*}{Beneficiary} & Refers to a referent which is advantaged or disadvantaged by an event. \\ 
+        & Когда Саше было девять лет, мать купила [ему]$_{Beneficiary}$ кроссовки. \\
 \midrule
  \multirow{2}{*}{Cause} & ~ \\ 
+        & ~ \\
+\midrule
+ \multirow{2}{*}{Causer} & Refers to the referent which instigates an event rather than actually doing it. \\ 
         & ~ \\
 \midrule
  \multirow{2}{*}{Circumstance} & ~ \\ 
@@ -178,17 +186,17 @@ The dependency relations in the constructicon are based on Universal Dependencie
  \multirow{2}{*}{Event} & ~ \\ 
         & ~ \\
 \midrule
- \multirow{2}{*}{Experiencer} & ~ \\ 
+ \multirow{2}{*}{Experiencer} & Refers to an entity that receives a sensory impression, or in some other way is the locus of some event or activity that involves neither volition nor a change of state. \\ 
         & ~ \\
 \midrule
  \multirow{2}{*}{Function} & ~ \\ 
         & ~ \\
 \midrule
- \multirow{2}{*}{Goal} & ~ \\ 
+ \multirow{2}{*}{Goal} & Refers to the place to which something moves, or the thing towards which an action is directed. \\ 
         & ~ \\
 \midrule
- \multirow{2}{*}{Instrument} & ~ \\ 
-        & ~ \\
+ \multirow{2}{*}{Instrument} & Refers to an inanimate thing that an agent uses to implement an event. It is the stimulus or immediate physical cause of an event. \\ 
+        & Он написал пиьсмо [карандашом]$_{Instrument}$. \\
 \midrule
  \multirow{2}{*}{Landmark} & ~ \\ 
         & ~ \\
@@ -196,13 +204,16 @@ The dependency relations in the constructicon are based on Universal Dependencie
  \multirow{2}{*}{Location} & ~ \\ 
         & ~ \\
 \midrule
- \multirow{2}{*}{Locative} & ~ \\ 
-        & ~ \\
+ \multirow{2}{*}{Locative} & Refers to the location or spatial orientation of a state or action. It does not imply any motion. \\ 
+        & Иван нашел лягушку [в лесу]$_{Locative}$. \\
 \midrule
- \multirow{2}{*}{Manner} & ~ \\ 
+ \multirow{2}{*}{Manner} & Notes how the action, experience, or process of an event is carried out. \\ 
         & ~ \\
 \midrule
  \multirow{2}{*}{Material} & ~ \\ 
+        & ~ \\
+\midrule
+ \multirow{2}{*}{Measure} & Notes the quantification of an event. \\ 
         & ~ \\
 \midrule
  \multirow{2}{*}{Object} & ~ \\ 
@@ -217,7 +228,7 @@ The dependency relations in the constructicon are based on Universal Dependencie
  \multirow{2}{*}{Path} & ~ \\ 
         & ~ \\
 \midrule
- \multirow{2}{*}{Patient} & ~ \\ 
+ \multirow{2}{*}{Patient} & Refers to the surface object of the verb in a sentence. \\ 
         & ~ \\
 \midrule
  \multirow{2}{*}{Phenomenon} & ~ \\ 
@@ -232,7 +243,7 @@ The dependency relations in the constructicon are based on Universal Dependencie
  \multirow{2}{*}{Quantitative} & ~ \\ 
         & ~ \\
 \midrule
- \multirow{2}{*}{Recipient} & ~ \\ 
+ \multirow{2}{*}{Recipient} & Refers to a referent that is conscious of being affected by the state or action identified by the verb. \\ 
         & ~ \\
 \midrule
  \multirow{2}{*}{Requirement} & ~ \\ 
@@ -244,7 +255,7 @@ The dependency relations in the constructicon are based on Universal Dependencie
  \multirow{2}{*}{Situation} & ~ \\ 
         & ~ \\
 \midrule
- \multirow{2}{*}{Source} & ~ \\ 
+ \multirow{2}{*}{Source} & Refers to the (a) the place of origin, (b) the entity from which a physical sensation comes, (c) the original owner in a transfer. \\ 
         & ~ \\
 \midrule
  \multirow{2}{*}{State} & ~ \\ 
