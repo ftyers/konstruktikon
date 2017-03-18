@@ -87,26 +87,28 @@ Other:
 
 Morphological categories should be written in titlecase.
 
+\scalebox{0.95}{
 \begin{tabular}{lll}
-\multicolumn{3}{c}{Number} \\
+\toprule
+\multicolumn{3}{c}{\textbf{Number}} \\
 \hline
 Sg  & Singular & ~ \\
 Pl  & Plural & ~ \\
-\multicolumn{3}{c}{Gender} \\
+\multicolumn{3}{c}{\textbf{Gender}} \\
 \hline
 Neut & Neuter & ~ \\
 Masc & Masculine & ~ \\
 Fem & Feminine& ~ \\
-\multicolumn{3}{c}{Person} \\
+\multicolumn{3}{c}{\textbf{Person}} \\
 \hline
 1 & First person & ~ \\
 2 & Second person & ~ \\
 3 & Third person & ~ \\
-\multicolumn{3}{c}{Animacy} \\
+\multicolumn{3}{c}{\textbf{Animacy}} \\
 \hline
 Anim & Animate & ~ \\
 Inan & Inanimate & ~ \\
-\multicolumn{3}{c}{Case} \\
+\multicolumn{3}{c}{\textbf{Case}} \\
 \hline
 Nom & Nominative &  \\
 Gen & Genitive & ~ \\
@@ -114,7 +116,7 @@ Acc & Accusative &  \\
 Dat & Dative & \emph{\underline{мне} нравится}, \emph{к \underline{родителям}} \\
 Ins & Instrumental & ~ \\
 Loc & Locative & ~ \\
-\multicolumn{3}{c}{Marginal cases} \\
+\multicolumn{3}{c}{\textbf{Marginal cases}} \\
 \hline
 Voc & Vocative & \emph{ребят !} \\
 Par & Partitive & \emph{чашка \underline{чаю}} \\
@@ -122,10 +124,10 @@ Adn & Adnumeral & \emph{два \underline{ряда́}} \\
 Loc2 & 2nd Locative & \emph{в \underline{лесу}} \\
 Acc2 & 2nd Accusative & \emph{пойти в \underline{депутаты}} \\
 Dat2 & 2nd Dative & \emph{по \underline{скольку}, по \underline{стольку}} \\
-\multicolumn{3}{c}{Degree} \\
+\multicolumn{3}{c}{\textbf{Degree}} \\
 \hline
 Cmp & Comparative & ~ \\
-\multicolumn{3}{c}{Verbs} \\
+\multicolumn{3}{c}{\textbf{Verbs}} \\
 \hline
 Inf & Infinitive & ~ \\
 Pres & Present   & ~ \\
@@ -142,7 +144,9 @@ Pass & Passive & ~ \\
 Act & Active & ~ \\
 Short & Short form & \emph{принят}, \emph{холоден} \\
 Conv & Verbal adverb / Деепричастие & ~ \\
+\bottomrule
 \end{tabular}
+}
 
 Consider using the following common abbreviations: 
 
@@ -158,30 +162,43 @@ When referring to Person, the Number feature is also mandatory, e.g. -3.Pl
 \section{Phrasal categories}
 
 \begin{tabular}{lll}
-
-\multirow{2}{*}{NP} & Noun phrase & \\
+\toprule
+\multirow{2}{*}{\textbf{NP}} & Noun phrase & \\
                     & Мать за дочь сделала [NP домашнее задание] & \\
-\multirow{2}{*}{VP} & Verb phrase & \\
+\midrule
+\multirow{2}{*}{\textbf{VP}} & Verb phrase & \\
                     & Иван Иванович едва не [VP умер после такого розыгрыша] & \\
-\multirow{2}{*}{AP} & Adjectival phrase & \\
+\midrule
+\multirow{2}{*}{\textbf{AP}} & Adjectival phrase & \\
                     & & \\
-\multirow{2}{*}{AdvP} & Adverbial phrase & \\
+\midrule
+\multirow{2}{*}{\textbf{AdvP}} & Adverbial phrase & \\
                     & & \\
-\multirow{2}{*}{PP} & Prepositional phrase & \\
+\midrule
+\multirow{2}{*}{\textbf{PP}} & Prepositional phrase & \\
                     & А мы всё [PP без молока] и [PP без молока] & \\
-\multirow{2}{*}{NumP} & Numeral phrase & \\
+\midrule
+\multirow{2}{*}{\textbf{NumP}} & Numeral phrase & \\
                     & & \\
-\multirow{2}{*}{XP} & Any phrasal unit & \\
+\midrule
+\multirow{2}{*}{\textbf{XP}} & Any phrasal unit & \\
                     & Будь то [XP врач] или [XP учитель] & \\
-\multirow{2}{*}{BareCl} & Bare clause & \\
+\midrule
+\multirow{2}{*}{\textbf{BareCl}} & Bare clause & \\
                     & Как будто [Cl появилась молния] & \\
-\multirow{2}{*}{IndirCl} & Indirect speech clause & \\
+\midrule
+\multirow{2}{*}{\textbf{IndirCl}} & Indirect speech clause & \\
                     & Не знаю, [IndirCl пришёл \emph{ли} он] & \\
-\multirow{2}{*}{Cl} & Clause & \\
+\midrule
+\multirow{2}{*}{\textbf{Cl}} & Clause & \\
                     & [Cl Как будто появилась молния] & \\
-\multirow{2}{*}{S} & Sentence & \\
+\midrule
+\multirow{2}{*}{\textbf{S}} & Sentence & \\
                     & & \\
+\bottomrule
 \end{tabular}
+
+Phrase-level features should be indicated after a hyphen, `-'.
 
 When to use a phrasal category? 
 \begin{itemize}
