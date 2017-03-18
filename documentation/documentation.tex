@@ -24,6 +24,7 @@
 \usepackage{booktabs}
 
 \usepackage{tikz-dependency}
+\usepackage{tikz-qtree}
 
 \newcommand{\gmk}[1]{{\rm {\ll \textsc{#1}}}}
 \newcommand{\kazakh}[1]{{\em #1}}
@@ -181,6 +182,32 @@ When referring to Person, the Number feature is also mandatory, e.g. -3.Pl
 \multirow{2}{*}{S} & Sentence & \\
                     & & \\
 \end{tabular}
+
+When to use a phrasal category? 
+\begin{itemize}
+  \item When the constituent is not closed to modification
+\end{itemize}
+
+\begin{figure}
+\centering
+\begin{tikzpicture}
+\Tree [.далеко~до NP-Dat$\downarrow$ NP-Gen$\downarrow$ ]
+\end{tikzpicture}
+\begin{tikzpicture}
+\Tree [.далеко~до [.NP-Dat [.N Улицам ] ] [.NP-Gen [.A идеальной ] [.N чистоты ] ] ]
+\end{tikzpicture}
+\end{figure}
+
+\begin{figure}
+\centering
+\begin{tikzpicture}
+\Tree [.N [.N N ] [.из из N-Pl.Gen ] ]
+\end{tikzpicture}
+\begin{tikzpicture}
+\Tree [.N [.N король ] [.из из королей ] ]
+\end{tikzpicture}
+
+\end{figure}
 
 \section{Discourse categories}
 
