@@ -202,25 +202,25 @@ Phrase-level features should be indicated after a hyphen, `-'.
 
 When to use a phrasal category?  --- When the constituent is not closed to modification.
 
-\begin{figure}
-\centering
-\textbf{Open:}
-\begin{tikzpicture}
-\Tree [.далеко~до NP-Dat$\downarrow$ NP-Gen$\downarrow$ ]
-\end{tikzpicture}
-\begin{tikzpicture}
-\Tree [.далеко~до [.NP-Dat [.N Улицам ] ] [.NP-Gen [.A идеальной ] [.N чистоты ] ] ]
-\end{tikzpicture}
-
-\textbf{Closed:}
-\begin{tikzpicture}
-\Tree [.N [.N N ] [.из из N-Pl.Gen ] ]
-\end{tikzpicture}
-\begin{tikzpicture}
-\Tree [.N [.N король ] [.из из королей ] ]
-\end{tikzpicture}
-
-\end{figure}
+%\begin{figure}
+%\centering
+%\textbf{Open:}
+%\begin{tikzpicture}
+%\Tree [.далеко~до NP-Dat$\downarrow$ NP-Gen$\downarrow$ ]
+%\end{tikzpicture}
+%\begin{tikzpicture}
+%\Tree [.далеко~до [.NP-Dat [.N Улицам ] ] [.NP-Gen [.A идеальной ] [.N чистоты ] ] ]
+%\end{tikzpicture}
+%
+%\textbf{Closed:}
+%\begin{tikzpicture}
+%\Tree [.N [.N N ] [.из из N-Pl.Gen ] ]
+%\end{tikzpicture}
+%\begin{tikzpicture}
+%\Tree [.N [.N король ] [.из из королей ] ]
+%\end{tikzpicture}
+%
+%\end{figure}
 
 \section{Discourse categories}
 
@@ -236,6 +236,8 @@ When to use a phrasal category?  --- When the constituent is not closed to modif
 The dependency relations in the constructicon are based on Universal Dependencies.\footnote{\url{http://universaldependencies.org/ru/dep/all.html}}
 
 \begin{figure}[ht]
+	\begin{subfigure}[b]{0.45\textwidth}
+
 \centering
         \begin{dependency}%[font = \small]
            \begin{deptext}[column sep=0.2cm]
@@ -245,10 +247,31 @@ The dependency relations in the constructicon are based on Universal Dependencie
                      Number: \& \gmk{Plur} \& \_ \& \_ \\
                      Case: \& \_ \& \_ \& \gmk{Ins} \\
                 \end{deptext}
-                \deproot[edge unit distance=1.3ex]{2}{\udlabel{x}}
+                \deproot[edge unit distance=1.8ex]{2}{\udlabel{root}}
                 \depedge{4}{3}{\udlabel{case}}
                 \depedge{2}{4}{\udlabel{nmod}}
+       \end{dependency}
+       \caption{мы\_с\_кем-то}
+	\end{subfigure}
+    \quad
+	\begin{subfigure}[b]{0.45\textwidth}
+\centering
+        \begin{dependency}%[font = \small]
+           \begin{deptext}[column sep=0.2cm]
+                     ~          \& \_         \& \_         \& в         \& \_                \\
+                     POS:       \& \gmk{NUM}  \& \gmk{NOUN} \& \gmk{ADP} \& \gmk{NOUN}        \\
+                     Case:      \& \_         \& \_         \& \_        \& \gmk{Acc} \\
+                     ~      \& ~         \& ~         \& ~        \& ~ \\
+                     ~      \& ~         \& ~         \& ~        \& ~ \\
+                \end{deptext}
+                \deproot[edge unit distance=1.8ex]{2}{\udlabel{root}}
+                \depedge{5}{4}{\udlabel{case}}
+                \depedge{3}{5}{\udlabel{nmod}}
+                \depedge{3}{2}{\udlabel{nummod}}
         \end{dependency}
+       \caption{60\_километров\_в\_час}
+\end{subfigure}
+
 \end{figure}
 
 \section{Semantic roles}
