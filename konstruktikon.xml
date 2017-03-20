@@ -16,6 +16,8 @@
         <feat att="cee" val="лет" />
         <feat att="cee" val="человек" />
         <feat att="structure" val="[NP] [лет [Num-Gen]]" />
+        <feat att="structure"
+        val="[root NP [nmod лет [nummod Num-Gen]]]" />
         <karp:example>
           <karp:text n="0">Впереди походкой от бедра
           шла</karp:text>
@@ -247,29 +249,62 @@
     </LexicalEntry>
     <LexicalEntry xml:lang="rus">
       <Lemma />
-      <Sense id="konstruktikon-rus--Cl_как_VP-Perf">
+      <Sense id="konstruktikon-rus--NP-Nom_как_VP-Perf">
         <feat att="illustration"
         val="а потом у него как затрясутся руки" />
         <feat att="type" val="konstruktion" />
         <feat att="cee" val="как" />
         <feat att="cee" val="закричит" />
-        <feat att="structure" val="[Cl[как[VP-Perf]]]" />
+        <feat att="structure" val="[NP-Nom[как[VP-Perf]]]" />
         <karp:example>
-          <karp:text n="0">Она как закричит на него!</karp:text>
+          <karp:e n="0" name="NP-Nom_как_VP-Perf">
+            <karp:e n="0" name="Agent">Она</karp:e>
+            <karp:text n="1" />
+            <karp:e n="2" name="как">как</karp:e>
+            <karp:text n="3" />
+            <karp:e n="4" name="Action">закричит</karp:e>
+            <karp:g n="5" />
+          </karp:e>
+          <karp:text n="1">на него!</karp:text>
         </karp:example>
         <karp:example>
-          <karp:text n="0">Как вскочит, да как стукнет кулаком по
+          <karp:e n="0" name="NP-Nom_как_VP-Perf">
+            <karp:e n="0" name="как">Как</karp:e>
+            <karp:text n="1" />
+            <karp:e n="2" name="Action">вскочит</karp:e>
+            <karp:text n="3" />
+            <karp:e n="4" name="Agent">он</karp:e>
+            <karp:g n="5" />
+          </karp:e>
+          <karp:g n="1" />
+          <karp:text n="2">, да как стукнет кулаком по
           столу!</karp:text>
         </karp:example>
         <karp:example>
-          <karp:text n="0">Вдруг она как поскользнись, да и упала
-          на спину</karp:text>
+          <karp:text n="0">Вдруг</karp:text>
+          <karp:e n="1" name="NP-Nom_как_VP-Perf">
+            <karp:e n="0" name="Agent">Маша</karp:e>
+            <karp:text n="1" />
+            <karp:e n="2" name="как">как</karp:e>
+            <karp:text n="3" />
+            <karp:e n="4" name="Action">поскользнись</karp:e>
+            <karp:g n="5" />
+            <karp:text n="6" />
+          </karp:e>
+          <karp:g n="2" />
+          <karp:text n="3">, да и упала на спину.</karp:text>
         </karp:example>
         <definition>
           <karp:text n="0">Конструкция обозначает начало какого-то
-          неожиданного(напряженного), внезапного действия в
-          прошлом</karp:text>
+          неожиданного(напряженного), внезапного</karp:text>
+          <karp:e n="1" name="Action">действия</karp:e>
+          <karp:text n="2">в прошлом.</karp:text>
         </definition>
+        <konst:int_const_elem cat="NP" msd="NounType=Nom"
+        name="Agent" role="Agent" />
+        <konst:int_const_elem lu="как" name="как" role="как" />
+        <konst:int_const_elem cat="VP" msd="VerbType=Perfective"
+        name="Action" role="Action" />
       </Sense>
     </LexicalEntry>
     <LexicalEntry xml:lang="rus">
@@ -1149,33 +1184,66 @@
     </LexicalEntry>
     <LexicalEntry xml:lang="rus">
       <Lemma />
-      <Sense id="konstruktikon-rus--NP-Nom_прямо_Cl">
+      <Sense id="konstruktikon-rus--NP-Nom_прямо_VP/NP-Nom">
         <feat att="illustration" val="я прямо так и подумала" />
         <feat att="type" val="konstruktion" />
         <feat att="cee" val="прямо" />
         <feat att="cee" val="так" />
         <feat att="cee" val="бесит" />
-        <feat att="structure" val="[NP-Nom[прямо[Cl]]]" />
+        <feat att="structure" val="[NP-Nom[прямо[VP/NP-Nom]]]" />
         <karp:example>
-          <karp:text n="0">Я прямо удивился такой его реакции на
-          мои безобидные слова</karp:text>
+          <karp:e n="0" name="NP-Nom_прямо_VP/NP-Nom">
+            <karp:e n="0" name="Agent">Я</karp:e>
+            <karp:text n="1" />
+            <karp:e n="2" name="прямо">прямо</karp:e>
+            <karp:text n="3" />
+            <karp:e n="4" name="Action">удивился</karp:e>
+            <karp:g n="5" />
+            <karp:text n="6" />
+          </karp:e>
+          <karp:text n="1">такой его реакции на мои безобидные
+          слова.</karp:text>
         </karp:example>
         <karp:example>
-          <karp:text n="0">Родители прямо видят нечто опасное в
-          обществе нового учителя для их детей</karp:text>
+          <karp:e n="0" name="NP-Nom_прямо_VP/NP-Nom">
+            <karp:e n="0" name="Agent">Родители</karp:e>
+            <karp:text n="1" />
+            <karp:e n="2" name="прямо">прямо</karp:e>
+            <karp:text n="3" />
+            <karp:e n="4" name="Action">видят</karp:e>
+            <karp:g n="5" />
+            <karp:text n="6" />
+          </karp:e>
+          <karp:text n="1">нечто опасное в обществе нового учителя
+          для их детей.</karp:text>
         </karp:example>
         <karp:example>
-          <karp:text n="0">Она приходила в лес прямо как на
-          свидание с любимым</karp:text>
-        </karp:example>
-        <karp:example>
-          <karp:text n="0">Это - прямо наказание
-          какое-то!</karp:text>
+          <karp:e n="0" name="NP-Nom_прямо_VP/NP-Nom">
+            <karp:e n="0" name="Theme">Это</karp:e>
+            <karp:text n="1">-</karp:text>
+            <karp:e n="2" name="прямо">прямо</karp:e>
+            <karp:text n="3" />
+            <karp:e n="4" name="Theme">наказание</karp:e>
+            <karp:g n="5" />
+            <karp:text n="6" />
+          </karp:e>
+          <karp:text n="1">какое-то!</karp:text>
         </karp:example>
         <definition>
           <karp:text n="0">Конструкция употребляется для усиления
-          значения чего-либо сказанного</karp:text>
+          значимости сказанного</karp:text>
+          <karp:e n="1" name="Agent">говорящим</karp:e>
+          <karp:g n="2" />
+          <karp:text n="3">, подтверждение его слов.</karp:text>
         </definition>
+        <konst:int_const_elem cat="NP" msd="NounType=Nom"
+        name="Agent" role="Agent" />
+        <konst:int_const_elem lu="прямо" name="прямо"
+        role="прямо" />
+        <konst:int_const_elem cat="VP" name="Action"
+        role="Action" />
+        <konst:int_const_elem cat="NP" msd="NounType=Nom"
+        name="Theme" role="Theme" />
       </Sense>
     </LexicalEntry>
     <LexicalEntry xml:lang="rus">
@@ -1850,6 +1918,10 @@
         <feat att="cee" val="же" />
         <feat att="cee" val="?" />
         <feat att="structure" val="[(а) как же [NP-Nom]]?" />
+        <feat att="structure"
+        val="[root как [advmod же] [nsubj NP-Nom]]" />
+        <feat att="structure"
+        val="[root [cc а] как [advmod же] [nsubj NP-Nom]]" />
         <karp:example>
           <karp:text n="0">Иван поднял голову и спросил:
           ―</karp:text>
@@ -2522,45 +2594,70 @@
     </LexicalEntry>
     <LexicalEntry xml:lang="rus">
       <Lemma />
-      <Sense id="konstruktikon-rus--гораздо A-ее|Adv-ее">
+      <Sense id="konstruktikon-rus--так_я_(тебе)_и_VP!">
+        <feat att="illustration" val="так я тебе и пошел!" />
         <feat att="type" val="konstruktion" />
-        <feat att="cee" val="гораздо" />
+        <feat att="cee" val="так" />
+        <feat att="cee" val="тебе" />
+        <feat att="cee" val="и" />
+        <feat att="cee" val="поверила" />
+        <feat att="structure" val="[так[(тебе)[и[VP!]]]]" />
         <karp:example>
-          <karp:text n="0">Кроме того, уезжать всегда</karp:text>
-          <karp:e n="1" name="гораздо_Adv-ее,">
-            <karp:e n="0" name="гораздо">гораздо</karp:e>
+          <karp:e n="0" name="так_я_(тебе)_и_VP!">
+            <karp:e n="0" name="так">Так</karp:e>
             <karp:text n="1" />
-            <karp:e n="2" name="Property">легче</karp:e>
+            <karp:e n="2" name="я">я</karp:e>
             <karp:text n="3" />
+            <karp:e n="4" name="тебе">тебе</karp:e>
+            <karp:text n="5" />
+            <karp:e n="6" name="и">и</karp:e>
+            <karp:text n="7" />
+            <karp:e n="8" name="Action">замолчал!</karp:e>
+            <karp:g n="9" />
           </karp:e>
-          <karp:text n="2">чем оставаться…</karp:text>
         </karp:example>
         <karp:example>
-          <karp:text n="0">Оказывается, рассуждать публично на
-          такие темы</karp:text>
-          <karp:e n="1" name="гораздо_Adv-ее,">
-            <karp:e n="0" name="гораздо">гораздо</karp:e>
+          <karp:e n="0" name="так_я_(тебе)_и_VP!">
+            <karp:e n="0" name="так">Так</karp:e>
             <karp:text n="1" />
-            <karp:e n="2" name="Property">труднее</karp:e>
+            <karp:e n="2" name="я">я</karp:e>
+            <karp:text n="3" />
+            <karp:e n="4" name="и">и</karp:e>
+            <karp:text n="5" />
+            <karp:e n="6" name="Action">пойду</karp:e>
+            <karp:g n="7" />
+            <karp:text n="8" />
           </karp:e>
-          <karp:text n="2">чем рассказывать про бывших жен или про
-          болезни.</karp:text>
+          <karp:text n="1">! Иди сам.</karp:text>
         </karp:example>
         <karp:example>
-          <karp:text n="0">В реальной жизни я ношу не юбки, а
-          джинсы, потому что это</karp:text>
-          <karp:e n="1" name="гораздо_Adv-ее.">
-            <karp:e n="0" name="гораздо">гораздо</karp:e>
+          <karp:text n="0">Я буду любить тебя всю жизнь, Рита!
+          ―</karp:text>
+          <karp:e n="1" name="так_я_(тебе)_и_VP!">
+            <karp:e n="0" name="так">Так</karp:e>
             <karp:text n="1" />
-            <karp:e n="2" name="Property">удобнее</karp:e>
+            <karp:e n="2" name="я">я</karp:e>
+            <karp:text n="3" />
+            <karp:e n="4" name="тебе">тебе</karp:e>
+            <karp:text n="5" />
+            <karp:e n="6" name="и">и</karp:e>
+            <karp:text n="7" />
+            <karp:e n="8" name="Action">поверила!</karp:e>
+            <karp:g n="9" />
           </karp:e>
         </karp:example>
-        <konst:int_const_elem cat="AP" lu="гораздо"
-        msd="AdverbType" name="гораздо" role="Property" />
-        <konst:int_const_elem cat="AP" msd="AdjectiveType=Comp"
-        name="Property" role="Property" />
-        <konst:int_const_elem cat="AP" msd="AdverbType=Comp"
-        name="Property" role="Property" />
+        <definition>
+          <karp:text n="0">Конструкция используется для обозначения
+          того, что говорящий категорически, с оттенком вызова
+          отрицает, не соглашается что-либо</karp:text>
+          <karp:e n="1" name="Action">делать.</karp:e>
+        </definition>
+        <konst:int_const_elem lu="так" name="так" role="так" />
+        <konst:int_const_elem lu="ты" name="тебе" role="тебе" />
+        <konst:int_const_elem lu="и" name="и" role="и" />
+        <konst:int_const_elem cat="VP" name="Action"
+        role="Action" />
+        <konst:int_const_elem lu="я" name="я" role="я" />
       </Sense>
     </LexicalEntry>
     <LexicalEntry xml:lang="rus">
@@ -2983,6 +3080,10 @@
         <feat att="cee" val="похожая" />
         <feat att="structure"
         val="[(быть) [похож [на [NP-Acc]]]" />
+        <feat att="structure"
+        val="[root похож [obl NP-Acc [casе на]]]" />
+        <feat att="structure"
+        val="[root [cop быть] похож [obl NP-Acc [casе на]]]" />
         <karp:example>
           <karp:text n="0">Внешне</karp:text>
           <karp:e n="1" name="Object">эти растения</karp:e>
@@ -3587,71 +3688,65 @@
     </LexicalEntry>
     <LexicalEntry xml:lang="rus">
       <Lemma />
-      <Sense id="konstruktikon-rus--NP-Acc_звать_NP-Ins/NP">
-        <feat att="illustration" val="мальчика звать Юрой" />
-        <feat att="coll" val="звать" />
+      <Sense id="konstruktikon-rus--ну_и_NP-Nom!">
+        <feat att="illustration" val="ну и ночь!" />
         <feat att="type" val="konstruktion" />
-        <feat att="cee" val="звать" />
-        <feat att="cee" val="зовут" />
-        <feat att="structure"
-        val="[NP-Acc] [звать [NP-Instr/NP]]" />
+        <feat att="cee" val="ну" />
+        <feat att="cee" val="и" />
+        <feat att="cee" val="!" />
+        <feat att="structure" val="[ну и [NP]]" />
         <karp:example>
-          <karp:text n="0">Кот вдруг возразил: ―</karp:text>
-          <karp:e n="1" name="NP-Acc_звать_NP-Instr/NP">
-            <karp:e n="0" name="Participant">Меня</karp:e>
+          <karp:e n="0" name="ну_и_NP!">
+            <karp:e n="0" name="ну">Ну</karp:e>
             <karp:text n="1" />
-            <karp:e n="2" name="звать">звать</karp:e>
+            <karp:e n="2" name="и">и</karp:e>
             <karp:text n="3" />
-            <karp:e n="4" name="Name">Мельхиор</karp:e>
+            <karp:e n="4" name="Stimulus">местечко</karp:e>
+            <karp:g n="5" />
+            <karp:text n="6" />
           </karp:e>
-          <karp:text n="2">. А вас?</karp:text>
+          <karp:text n="1">выбрали они для ночлега!</karp:text>
         </karp:example>
         <karp:example>
-          <karp:e n="0" name="NP-Acc_звать_NP-Instr/NP">
-            <karp:e n="0" name="Participant">Мальчика</karp:e>
+          <karp:text n="0">Старуха взяла деньги и сказала, что её
+          зовут Октябрина Михайловна.</karp:text>
+          <karp:e n="1" name="ну_и_NP!">
+            <karp:e n="0" name="ну">Ну</karp:e>
             <karp:text n="1" />
-            <karp:e n="2" name="звать">звать</karp:e>
+            <karp:e n="2" name="и">и</karp:e>
             <karp:text n="3" />
-            <karp:e n="4" name="Name">Василий</karp:e>
-            <karp:g n="5" />
+            <karp:e n="4" name="Stimulus">имя</karp:e>
+            <karp:text n="5" />
           </karp:e>
-          <karp:text n="1">.</karp:text>
+          <karp:g n="2" />
+          <karp:text n="3">.</karp:text>
         </karp:example>
         <karp:example>
-          <karp:e n="0" name="NP-Acc_звать_NP-Instr/NP">
-            <karp:e n="0" name="Participant">Этого пса</karp:e>
+          <karp:text n="0">В Вашингтоне не скрыли своего удивления:
+          ―</karp:text>
+          <karp:e n="1" name="ну_и_NP!">
+            <karp:e n="0" name="ну">Ну</karp:e>
             <karp:text n="1" />
-            <karp:e n="2" name="звать">звать</karp:e>
+            <karp:e n="2" name="и">и</karp:e>
             <karp:text n="3" />
-            <karp:e n="4" name="Name">Наполеон Третий</karp:e>
-            <karp:g n="5" />
+            <karp:e n="4" name="Stimulus">дела</karp:e>
+            <karp:text n="5" />
           </karp:e>
-          <karp:text n="1">!</karp:text>
+          <karp:text n="2">! Звонишь хозяину Кремля, а у него в
+          гостях британский премьер…</karp:text>
         </karp:example>
         <definition>
-          <karp:text n="0">Безличная конструкция для
-          передачи</karp:text>
-          <karp:e n="1" name="Name">имени</karp:e>
-          <karp:text n="2" />
-          <karp:e n="3" name="Participant">участника</karp:e>
-          <karp:text n="4">. Допускается использование глагола в
-          форме "зовут".</karp:text>
+          <karp:text n="0">Конструкция выражает удивление
+          говорящего от</karp:text>
+          <karp:e n="1" name="Stimulus">некоторого объекта или
+          ситуации</karp:e>
+          <karp:text n="2">. Говорящий ожидал лучшего. Часто на
+          письме сопровождается восклицательным знаком.</karp:text>
         </definition>
-        <definition xml:lang="eng">
-          <karp:text n="0">Impersonal construction for
-          communicating the</karp:text>
-          <karp:e n="1" name="Name">name</karp:e>
-          <karp:text n="2">of a</karp:text>
-          <karp:e n="3" name="Participant.">participant</karp:e>
-          <karp:text n="4">It is also possible to use the verb form
-          "зовут" in this construction.</karp:text>
-        </definition>
-        <konst:int_const_elem cat="NP" msd="NounType=Acc"
-        name="Participant" role="Participant" />
-        <konst:int_const_elem cat="VP" lu="звать"
-        msd="VerbType=Inf" name="звать" />
-        <konst:int_const_elem aux="NounType=Nominative" cat="NP"
-        msd="NounType=Instrum" name="Name" role="Name" />
+        <konst:int_const_elem lu="ну" name="ну" />
+        <konst:int_const_elem lu="и" name="и" />
+        <konst:int_const_elem cat="NP" msd="NounType=Nom"
+        name="Stimulus" role="Stimulus" />
       </Sense>
     </LexicalEntry>
     <LexicalEntry xml:lang="rus">
@@ -4600,26 +4695,59 @@
         <feat att="cee" val="неудобно" />
         <feat att="structure" val="[как-то/что-то[Cl]]" />
         <karp:example>
-          <karp:text n="0">Как-то мне его жалко стало! - говорила
-          она директору.</karp:text>
+          <karp:e n="0" name="как-то/что-то_Cl">
+            <karp:e n="0" name="как-то">Как-то</karp:e>
+            <karp:text n="1">мне его</karp:text>
+            <karp:e n="2" name="State">жалко стало!</karp:e>
+            <karp:g n="3" />
+          </karp:e>
+          <karp:text n="1">- говорила она директору.</karp:text>
         </karp:example>
         <karp:example>
-          <karp:text n="0">Ты что-то веселый приехал
-          сегодня!</karp:text>
+          <karp:text n="0">Ты</karp:text>
+          <karp:e n="1" name="как-то/что-то_Cl">
+            <karp:e n="0" name="что-то">что-то</karp:e>
+            <karp:text n="1" />
+            <karp:e n="2" name="State">веселый приехал</karp:e>
+            <karp:g n="3" />
+          </karp:e>
+          <karp:text n="2">сегодня!</karp:text>
         </karp:example>
         <karp:example>
-          <karp:text n="0">Что-то не нравится он мне сегодня, --
-          ходит какой-то мрачный.</karp:text>
+          <karp:e n="0" name="как-то/что-то_Cl">
+            <karp:e n="0" name="что-то">Что-то</karp:e>
+            <karp:text n="1" />
+            <karp:e n="2" name="State">не нравится он мне
+            сегодня</karp:e>
+            <karp:g n="3" />
+          </karp:e>
+          <karp:g n="1" />
+          <karp:text n="2">, -- ходит какой-то мрачный.</karp:text>
         </karp:example>
         <karp:example>
-          <karp:text n="0">Как-то стыдно перед родителями -- нужно
-          извиниться</karp:text>
+          <karp:e n="0" name="State">
+            <karp:e n="0" name="как-то">Как-то</karp:e>
+            <karp:text n="1" />
+            <karp:e n="2" name="State">стыдно перед
+            родителями</karp:e>
+            <karp:g n="3" />
+            <karp:text n="4" />
+          </karp:e>
+          <karp:text n="1">-- нужно извиниться.</karp:text>
         </karp:example>
         <definition>
           <karp:text n="0">Конструкция обозначает, что некоторый
-          субъект затрудняется точно определить образ(чувства) или
-          способ действия</karp:text>
+          субъект</karp:text>
+          <karp:e n="1" name="как-то/что-то">затрудняется</karp:e>
+          <karp:text n="2">точно определить</karp:text>
+          <karp:e n="3" name="State">образ(чувства) или способ
+          действия.</karp:e>
         </definition>
+        <konst:int_const_elem lu="как-то" name="как-то"
+        role="как-то" />
+        <konst:int_const_elem msd="что-то" name="что-то"
+        role="что-то" />
+        <konst:int_const_elem cat="Cl" name="State" role="State" />
       </Sense>
     </LexicalEntry>
     <LexicalEntry xml:lang="rus">
@@ -5041,7 +5169,7 @@
     </LexicalEntry>
     <LexicalEntry xml:lang="rus">
       <Lemma />
-      <Sense id="konstruktikon-rus--NP-Nom_чуть_было_не_VP">
+      <Sense id="konstruktikon-rus--NP-Nom_чуть_было_не_VP-Past">
         <feat att="illustration"
         val="он чуть было не забыл про экзамен" />
         <feat att="type" val="konstruktion" />
@@ -5051,24 +5179,69 @@
         <feat att="cee" val="засмеялся" />
         <feat att="structure" val="[NP-Nom[чуть было [не[VP]]]]" />
         <karp:example>
-          <karp:text n="0">Петр чуть было не женился на Ларисе, но
-          вовремя одумался</karp:text>
+          <karp:e n="0" name="NP-Nom_чуть_было_не_VP">
+            <karp:e n="0" name="Agent">Петр</karp:e>
+            <karp:text n="1" />
+            <karp:e n="2" name="чуть">чуть</karp:e>
+            <karp:text n="3" />
+            <karp:e n="4" name="было">было</karp:e>
+            <karp:text n="5" />
+            <karp:e n="6" name="не">не</karp:e>
+            <karp:text n="7" />
+            <karp:e n="8" name="Action">женился</karp:e>
+            <karp:g n="9" />
+          </karp:e>
+          <karp:text n="1">на Ларисе, но вовремя
+          одумался.</karp:text>
         </karp:example>
         <karp:example>
-          <karp:text n="0">Я чуть было сама не ударила его за эти
-          слова</karp:text>
+          <karp:e n="0" name="NP-Nom_чуть_было_не_VP">
+            <karp:e n="0" name="Agent">Я</karp:e>
+            <karp:text n="1" />
+            <karp:e n="2" name="чуть">чуть</karp:e>
+            <karp:text n="3" />
+            <karp:e n="4" name="было">было</karp:e>
+            <karp:text n="5">сама</karp:text>
+            <karp:e n="6" name="не">не</karp:e>
+            <karp:text n="7" />
+            <karp:e n="8" name="Action">ударила</karp:e>
+            <karp:g n="9" />
+          </karp:e>
+          <karp:text n="1">его за эти слова.</karp:text>
         </karp:example>
         <karp:example>
-          <karp:text n="0">Я чуть было не рассмеялся, но от этой
-          окончательной бестактности удержало меня что-то жалкоев
-          ее изумительных глубоких глазах</karp:text>
+          <karp:e n="0" name="NP-Nom_чуть_было_не_VP">
+            <karp:e n="0" name="Agent">Я</karp:e>
+            <karp:text n="1" />
+            <karp:e n="2" name="чуть">чуть</karp:e>
+            <karp:text n="3" />
+            <karp:e n="4" name="было">было</karp:e>
+            <karp:text n="5" />
+            <karp:e n="6" name="не">не</karp:e>
+            <karp:text n="7" />
+            <karp:e n="8" name="Action">рассмеялся</karp:e>
+            <karp:g n="9" />
+          </karp:e>
+          <karp:g n="1" />
+          <karp:text n="2">, но от этой окончательной бестактности
+          удержало меня что-то жалкоев ее изумительных глубоких
+          глазах.</karp:text>
         </karp:example>
         <definition>
           <karp:text n="0">Конструкция выражает высокую вероятность
-          совершения действия, но в итоге не случившееся неприятное
-          событие</karp:text>
+          совершения</karp:text>
+          <karp:e n="1" name="Action">действия</karp:e>
+          <karp:g n="2" />
+          <karp:text n="3">, но в итоге не случившееся неприятное
+          событие.</karp:text>
         </definition>
-        <konst:int_const_elem />
+        <konst:int_const_elem cat="NP" msd="NounType=Nom"
+        name="Agent" role="Agent" />
+        <konst:int_const_elem lu="чуть" name="чуть" role="чуть" />
+        <konst:int_const_elem lu="быть" name="было" role="было" />
+        <konst:int_const_elem lu="не" name="не" role="не" />
+        <konst:int_const_elem cat="VP" msd="VerbType=Past"
+        name="Action" role="Action" />
       </Sense>
     </LexicalEntry>
     <LexicalEntry xml:lang="rus">
@@ -6082,6 +6255,82 @@
         <konst:int_const_elem lu="нет" name="нет" />
         <konst:int_const_elem cat="NP"
         msd="Case=Gen|Number=Sing" />
+      </Sense>
+    </LexicalEntry>
+    <LexicalEntry xml:lang="rus">
+      <Lemma />
+      <Sense id="konstruktikon-rus--ещё_(и)_Cl!">
+        <feat att="illustration"
+        val="ещё и учительница называется" />
+        <feat att="type" val="konstruktion" />
+        <feat att="cee" val="ещё" />
+        <feat att="cee" val="и" />
+        <feat att="cee" val="называться" />
+        <feat att="cee" val="считаться" />
+        <feat att="cee" val="зваться" />
+        <feat att="structure" val="[ещё[(и)[Cl]]]!" />
+        <karp:example>
+          <karp:text n="0">Обманывает,</karp:text>
+          <karp:e n="1" name="ещё_(и)_Cl!">
+            <karp:e n="0" name="ещё">ещё</karp:e>
+            <karp:text n="1" />
+            <karp:e n="2" name="и">и</karp:e>
+            <karp:text n="3" />
+            <karp:e n="4" name="Topic">честное слово дает.</karp:e>
+            <karp:g n="5" />
+          </karp:e>
+        </karp:example>
+        <karp:example>
+          <karp:text n="0">Он не поздравил меня с днем
+          рождения,</karp:text>
+          <karp:e n="1" name="ещё_(и)_Cl!">
+            <karp:e n="0" name="ещё">ещё</karp:e>
+            <karp:text n="1" />
+            <karp:e n="2" name="и">и</karp:e>
+            <karp:text n="3" />
+            <karp:e n="4" name="Topic">хочет, чтобы я его
+            любила.</karp:e>
+            <karp:g n="5" />
+          </karp:e>
+        </karp:example>
+        <karp:example>
+          <karp:text n="0">А как стал популярным,</karp:text>
+          <karp:e n="1" name="ещё_(и)_Cl!">
+            <karp:e n="0" name="ещё">ещё</karp:e>
+            <karp:text n="1" />
+            <karp:e n="2" name="и">и</karp:e>
+            <karp:text n="3" />
+            <karp:e n="4" name="Topic">деньги за работу неплохие
+            получает!</karp:e>
+          </karp:e>
+        </karp:example>
+        <karp:example>
+          <karp:text n="0">Ты ведь трус,</karp:text>
+          <karp:e n="1" name="ещё_(и)_Cl!">
+            <karp:e n="0" name="ещё">ещё</karp:e>
+            <karp:text n="1" />
+            <karp:e n="2" name="и">и</karp:e>
+            <karp:text n="3" />
+            <karp:e n="4" name="Topic">капитан!</karp:e>
+            <karp:g n="5" />
+          </karp:e>
+        </karp:example>
+        <definition>
+          <karp:text n="0">Конструкция обозначает, что
+          говорящий</karp:text>
+          <karp:e n="1" name="ещё">добавляет</karp:e>
+          <karp:text n="2">к раннее сказаному н</karp:text>
+          <karp:g n="3" />
+          <karp:e n="4" name="Topic">овую негативную
+          информацию</karp:e>
+          <karp:text n="5">об участнике ситуации или осуждает
+          участника за его действия. Часто употребляется со
+          следующими глаголами: называться, считаться,
+          зваться.</karp:text>
+        </definition>
+        <konst:int_const_elem lu="ещё" name="ещё" role="ещё" />
+        <konst:int_const_elem lu="и" name="и" role="и" />
+        <konst:int_const_elem cat="Cl" name="Topic" role="Topic" />
       </Sense>
     </LexicalEntry>
     <LexicalEntry xml:lang="rus">
@@ -14071,6 +14320,86 @@
     </LexicalEntry>
     <LexicalEntry xml:lang="rus">
       <Lemma />
+      <Sense id="konstruktikon-rus--NP_того_стоить">
+        <feat att="illustration" val="Плавание того стоит" />
+        <feat att="type" val="konstruktion" />
+        <feat att="cee" val="того" />
+        <feat att="cee" val="стоит" />
+        <feat att="structure" val="[NP] [[того] стоит]" />
+        <karp:example>
+          <karp:text n="0">Не те годы, чтобы питаться консервами,
+          но наше</karp:text>
+          <karp:e n="1" name="NP_того_стоит">
+            <karp:g n="0" />
+            <karp:e n="1" name="Situation">дело</karp:e>
+            <karp:text n="2" />
+            <karp:e n="3" name="того">того</karp:e>
+            <karp:text n="4" />
+            <karp:e n="5" name="cтоит">стоило</karp:e>
+            <karp:g n="6" />
+            <karp:text n="7" />
+          </karp:e>
+          <karp:g n="2" />
+          <karp:text n="3">!</karp:text>
+        </karp:example>
+        <karp:example>
+          <karp:text n="0">В свое время он заплатил за</karp:text>
+          <karp:e n="1" name="Object">квартиру</karp:e>
+          <karp:text n="2">бешеные деньги, но</karp:text>
+          <karp:e n="3" name="NP_того_стоит">
+            <karp:e n="0" name="Object">она</karp:e>
+            <karp:text n="1" />
+            <karp:e n="2" name="того">того</karp:e>
+            <karp:text n="3" />
+            <karp:e n="4" name="cтоить">стоила</karp:e>
+            <karp:text n="5" />
+          </karp:e>
+          <karp:text n="4">.</karp:text>
+        </karp:example>
+        <karp:example>
+          <karp:text n="0">В прошлом мае первый зампредседателя
+          правительства Виктор Зубков объявил, что будет запущен
+          процесс реконструкции за 1200 миллионов рублей.
+          Но</karp:text>
+          <karp:e n="1" name="NP_того_стоит.">
+            <karp:g n="0" />
+            <karp:e n="1" name="Situation">результат</karp:e>
+            <karp:text n="2" />
+            <karp:e n="3" name="того">того</karp:e>
+            <karp:text n="4" />
+            <karp:e n="5" name="cтоит">стоит</karp:e>
+            <karp:g n="6" />
+            <karp:text n="7" />
+          </karp:e>
+          <karp:text n="2">Уже обнаружили десятки разрушенных
+          построек (удалось даже найти комплекс по производству
+          колоколов эпохи патриарха Никона).</karp:text>
+        </karp:example>
+        <definition>
+          <karp:text n="0">Конструкция используется для того, чтобы
+          показать, что</karp:text>
+          <karp:e n="1" name="Object">некоторый объект</karp:e>
+          <karp:text n="2">или</karp:text>
+          <karp:e n="3" name="Situation">случившаяся
+          ситуация</karp:e>
+          <karp:text n="4">полностью оправдывают все затраты и
+          труды, которые требуются или требовались ранее. Говорящий
+          доволен результатом. Допускается использование
+          конструкции в настоящем и прошедшем времени (основной
+          глагол</karp:text>
+          <karp:e n="5" name="cтоить">"стоить"</karp:e>
+          <karp:text n="6">согласуется с подлежащим).</karp:text>
+        </definition>
+        <konst:int_const_elem cat="NP" msd="NounType=Nom"
+        name="Object" role="Object" />
+        <konst:int_const_elem lu="тот" name="того" />
+        <konst:int_const_elem lu="стоить" name="cтоить" />
+        <konst:int_const_elem cat="NP" msd="NounType=Nom"
+        name="Situation" role="Situation" />
+      </Sense>
+    </LexicalEntry>
+    <LexicalEntry xml:lang="rus">
+      <Lemma />
       <Sense id="konstruktikon-rus--более_чем_Adv">
         <feat att="illustration" val="Более чем понятно" />
         <feat att="type" val="konstruktion" />
@@ -14489,6 +14818,8 @@
         <feat att="type" val="formel" />
         <feat att="evokes" val="Rate_quantification" />
         <feat att="structure" val="[NP [NumP NP]] [в NPacc]" />
+        <feat att="structure"
+        val="[root NP [nummod Num] [nmod [case в] NP-Acc]]" />
         <feat att="sweccnLink" val="AVBCLFmN9pg0dX7Prwnn" />
         <karp:example>
           <karp:text n="0">Разрешенная</karp:text>
@@ -15652,6 +15983,49 @@
     </LexicalEntry>
     <LexicalEntry xml:lang="rus">
       <Lemma />
+      <Sense id="konstruktikon-rus--гораздо A-ее|Adv-ее">
+        <feat att="type" val="konstruktion" />
+        <feat att="cee" val="гораздо" />
+        <karp:example>
+          <karp:text n="0">Кроме того, уезжать всегда</karp:text>
+          <karp:e n="1" name="гораздо_Adv-ее,">
+            <karp:e n="0" name="гораздо">гораздо</karp:e>
+            <karp:text n="1" />
+            <karp:e n="2" name="Property">легче</karp:e>
+            <karp:text n="3" />
+          </karp:e>
+          <karp:text n="2">чем оставаться…</karp:text>
+        </karp:example>
+        <karp:example>
+          <karp:text n="0">Оказывается, рассуждать публично на
+          такие темы</karp:text>
+          <karp:e n="1" name="гораздо_Adv-ее,">
+            <karp:e n="0" name="гораздо">гораздо</karp:e>
+            <karp:text n="1" />
+            <karp:e n="2" name="Property">труднее</karp:e>
+          </karp:e>
+          <karp:text n="2">чем рассказывать про бывших жен или про
+          болезни.</karp:text>
+        </karp:example>
+        <karp:example>
+          <karp:text n="0">В реальной жизни я ношу не юбки, а
+          джинсы, потому что это</karp:text>
+          <karp:e n="1" name="гораздо_Adv-ее.">
+            <karp:e n="0" name="гораздо">гораздо</karp:e>
+            <karp:text n="1" />
+            <karp:e n="2" name="Property">удобнее</karp:e>
+          </karp:e>
+        </karp:example>
+        <konst:int_const_elem cat="AP" lu="гораздо"
+        msd="AdverbType" name="гораздо" role="Property" />
+        <konst:int_const_elem cat="AP" msd="AdjectiveType=Comp"
+        name="Property" role="Property" />
+        <konst:int_const_elem cat="AP" msd="AdverbType=Comp"
+        name="Property" role="Property" />
+      </Sense>
+    </LexicalEntry>
+    <LexicalEntry xml:lang="rus">
+      <Lemma />
       <Sense id="konstruktikon-rus--(Cl)_NP-Nom_VP-Imper">
         <feat att="illustration"
         val="а я опять переделывай все после него" />
@@ -15920,6 +16294,66 @@
     </LexicalEntry>
     <LexicalEntry xml:lang="rus">
       <Lemma />
+      <Sense id="konstruktikon-rus--оно_и_Cl">
+        <feat att="illustration" val="оно и понятно" />
+        <feat att="type" val="konstruktion" />
+        <feat att="cee" val="оно" />
+        <feat att="cee" val="и" />
+        <feat att="structure" val="[оно[и[Cl]]]" />
+        <karp:example>
+          <karp:text n="0">Конечно, если продать парочку лошадок,
+          да одну из коров, да барашков,</karp:text>
+          <karp:e n="1" name="оно_и_Cl">
+            <karp:e n="0" name="оно">оно</karp:e>
+            <karp:g n="1" />
+            <karp:text n="2">, может быть,</karp:text>
+            <karp:e n="3" name="и">и</karp:e>
+            <karp:text n="4" />
+            <karp:e n="5" name="Topic">хватит.</karp:e>
+            <karp:g n="6" />
+          </karp:e>
+        </karp:example>
+        <karp:example>
+          <karp:e n="0" name="оно_и_Cl">
+            <karp:e n="0" name="оно">Оно</karp:e>
+            <karp:text n="1" />
+            <karp:e n="2" name="и">и</karp:e>
+            <karp:text n="3" />
+            <karp:e n="4" name="Topic">лучше</karp:e>
+            <karp:g n="5" />
+            <karp:text n="6" />
+          </karp:e>
+          <karp:g n="1" />
+          <karp:text n="2">, чтобы он вас поправлял, а не
+          подсказывал.</karp:text>
+        </karp:example>
+        <karp:example>
+          <karp:e n="0" name="оно_и_Cl">
+            <karp:e n="0" name="оно">Оно</karp:e>
+            <karp:text n="1" />
+            <karp:e n="2" name="и">и</karp:e>
+            <karp:text n="3" />
+            <karp:e n="4" name="Topic">верно</karp:e>
+            <karp:g n="5" />
+          </karp:e>
+          <karp:g n="1" />
+          <karp:text n="2">, нечего лишний раз себя
+          утруждать.</karp:text>
+        </karp:example>
+        <definition>
+          <karp:text n="0">Конструкция употребляется для
+          обозначения</karp:text>
+          <karp:e n="1" name="Topic">предмета речи</karp:e>
+          <karp:text n="2">и служит для того, чтобы подчеркнуть,
+          усилить предшествующе слова говорящего.</karp:text>
+        </definition>
+        <konst:int_const_elem lu="оно" name="оно" role="оно" />
+        <konst:int_const_elem msd="и" name="и" role="и" />
+        <konst:int_const_elem cat="Cl" name="Topic" role="Topic" />
+      </Sense>
+    </LexicalEntry>
+    <LexicalEntry xml:lang="rus">
+      <Lemma />
       <Sense id="konstruktikon-rus--вот_тебе_и_N">
         <feat att="illustration" val="вот тебе и праздник" />
         <feat att="type" val="konstruktion" />
@@ -15998,30 +16432,124 @@
     </LexicalEntry>
     <LexicalEntry xml:lang="rus">
       <Lemma />
-      <Sense id="konstruktikon-rus--Cl_именно_Cl">
-        <feat att="illustration" val="уехать-то именно нельзя!" />
+      <Sense id="konstruktikon-rus--именно_VP">
+        <feat att="illustration" val="именно уехать-то нельзя!" />
         <feat att="type" val="konstruktion" />
         <feat att="cee" val="именно" />
-        <feat att="structure" val="[Cl[именно[Cl]]]" />
+        <feat att="structure" val="[именно[VP]]" />
         <karp:example>
-          <karp:text n="0">А самое главное, что дома в такое время
-          именно лучше не сидеть</karp:text>
-        </karp:example>
-        <karp:example>
-          <karp:text n="0">Я именно хочу их всех отпустить на
-          волю</karp:text>
-        </karp:example>
-        <karp:example>
-          <karp:text n="0">Вот это что я именно имел в виду все это
+          <karp:text n="0">А самое главное, что дома в такое
           время</karp:text>
+          <karp:e n="1" name="именно_VP">
+            <karp:e n="0" name="именно">именно</karp:e>
+            <karp:text n="1" />
+            <karp:e n="2" name="Action">лучше не сидеть.</karp:e>
+            <karp:g n="3" />
+            <karp:text n="4" />
+          </karp:e>
+        </karp:example>
+        <karp:example>
+          <karp:text n="0">Я</karp:text>
+          <karp:e n="1" name="именно_VP">
+            <karp:e n="0" name="именно">именно</karp:e>
+            <karp:text n="1" />
+            <karp:e n="2" name="Action">хочу</karp:e>
+            <karp:g n="3" />
+          </karp:e>
+          <karp:text n="2">их всех отпустить на волю.</karp:text>
+        </karp:example>
+        <karp:example>
+          <karp:text n="0">Вот это что я</karp:text>
+          <karp:e n="1" name="именно_VP">
+            <karp:e n="0" name="именно">именно</karp:e>
+            <karp:text n="1" />
+            <karp:e n="2" name="Action">имел в виду</karp:e>
+            <karp:g n="3" />
+            <karp:text n="4" />
+          </karp:e>
+          <karp:g n="2" />
+          <karp:text n="3">все это время.</karp:text>
         </karp:example>
         <definition>
           <karp:text n="0">Конструкция обозначает, что говорящему
-          важно данное, конкретное действие, а не что-то другое,
-          чего в равной или большей степени можно было бы
-          ожидать</karp:text>
+          важно</karp:text>
+          <karp:e n="1" name="именно">данное, конкретное</karp:e>
+          <karp:text n="2" />
+          <karp:e n="3" name="Action">действие</karp:e>
+          <karp:g n="4" />
+          <karp:text n="5">, а не что-то другое, чего в равной или
+          большей степени можно было бы ожидать.</karp:text>
         </definition>
-        <konst:int_const_elem />
+        <konst:int_const_elem lu="именно" name="именно"
+        role="именно" />
+        <konst:int_const_elem cat="VP" name="Action"
+        role="Action" />
+      </Sense>
+    </LexicalEntry>
+    <LexicalEntry xml:lang="rus">
+      <Lemma />
+      <Sense id="konstruktikon-rus--чего_тут_ADJ-Gen/VP-Inf">
+        <feat att="illustration" val="чего тут говорить!" />
+        <feat att="type" val="konstruktion" />
+        <feat att="cee" val="чего" />
+        <feat att="cee" val="тут" />
+        <feat att="cee" val="говорить" />
+        <feat att="cee" val="понимать" />
+        <feat att="cee" val="хорошего" />
+        <feat att="structure" val="[чего[тут[Gen/VP-Inf]]]" />
+        <karp:example>
+          <karp:text n="0">А</karp:text>
+          <karp:e n="1" name="чего_тут_VP-Inf">
+            <karp:e n="0" name="чего">чего</karp:e>
+            <karp:text n="1" />
+            <karp:e n="2" name="тут">тут</karp:e>
+            <karp:text n="3" />
+            <karp:e n="4" name="Action">понимать</karp:e>
+            <karp:g n="5" />
+          </karp:e>
+          <karp:text n="2">? Тут и понимать нечего.</karp:text>
+        </karp:example>
+        <karp:example>
+          <karp:text n="0">Да уж, конечно,</karp:text>
+          <karp:e n="1" name="чего_тут_ADJ-Gen">
+            <karp:e n="0" name="чего">чего</karp:e>
+            <karp:text n="1" />
+            <karp:e n="2" name="тут">тут</karp:e>
+            <karp:text n="3" />
+            <karp:e n="4" name="Theme">интересного</karp:e>
+            <karp:g n="5" />
+          </karp:e>
+          <karp:g n="2" />
+          <karp:text n="3">, Маргарита Николаевна!</karp:text>
+        </karp:example>
+        <karp:example>
+          <karp:text n="0">А</karp:text>
+          <karp:e n="1" name="чего_тут_VP-Inf">
+            <karp:e n="0" name="чего">чего</karp:e>
+            <karp:text n="1" />
+            <karp:e n="2" name="тут">тут</karp:e>
+            <karp:text n="3" />
+            <karp:e n="4" name="Action">готовиться</karp:e>
+            <karp:g n="5" />
+            <karp:text n="6" />
+          </karp:e>
+          <karp:text n="2">? Я и так все знаю.</karp:text>
+        </karp:example>
+        <definition>
+          <karp:text n="0">Конструкция обозначает, что говорящий
+          относится к какому-либо</karp:text>
+          <karp:e n="1" name="Action">событию</karp:e>
+          <karp:text n="2">или</karp:text>
+          <karp:e n="3" name="Theme">предмету разговора</karp:e>
+          <karp:text n="4">как к не совсем серьезному, вызывающему
+          недоверчивое или шутливое отношение.</karp:text>
+        </definition>
+        <konst:int_const_elem lu="что" name="чего" role="чего" />
+        <konst:int_const_elem lu="тут" name="тут" role="тут" />
+        <konst:int_const_elem cat="VP" msd="VerbType=Infinitive"
+        name="Action" role="Action" />
+        <konst:int_const_elem cat="ADJ" msd="ADJType=Gen"
+        name="Theme" role="Theme" />
       </Sense>
     </LexicalEntry>
     <LexicalEntry xml:lang="rus">
@@ -17107,6 +17635,66 @@
     </LexicalEntry>
     <LexicalEntry xml:lang="rus">
       <Lemma />
+      <Sense id="konstruktikon-rus--NP-Nom_и_VP">
+        <feat att="illustration" val="я и хотел сказать" />
+        <feat att="type" val="konstruktion" />
+        <feat att="cee" val="и" />
+        <feat att="cee" val="хотел" />
+        <feat att="cee" val="сказать" />
+        <feat att="structure" val="[NP-Nom[и[VP]]]" />
+        <karp:example>
+          <karp:text n="0">Тропа нас вывела на дорогу, по
+          которой</karp:text>
+          <karp:e n="1" name="NP-Nom_и_VP">
+            <karp:e n="0" name="Agent">мы</karp:e>
+            <karp:text n="1" />
+            <karp:e n="2" name="и">и</karp:e>
+            <karp:text n="3" />
+            <karp:e n="4" name="Action">въехали</karp:e>
+            <karp:g n="5" />
+          </karp:e>
+          <karp:text n="2">в город.</karp:text>
+        </karp:example>
+        <karp:example>
+          <karp:text n="0">Читала и как-то про вас вспомнила,
+          а</karp:text>
+          <karp:e n="1" name="NP-Nom_и_VP">
+            <karp:e n="0" name="Agent">вы</karp:e>
+            <karp:text n="1" />
+            <karp:e n="2" name="и">и</karp:e>
+            <karp:text n="3" />
+            <karp:e n="4" name="Action">пришли.</karp:e>
+            <karp:g n="5" />
+          </karp:e>
+          <karp:text n="2" />
+        </karp:example>
+        <karp:example>
+          <karp:e n="0" name="Agent">Ты</karp:e>
+          <karp:text n="1">допиши сегодня сочинение, а
+          завтра</karp:text>
+          <karp:e n="2" name="NP-Nom_и_VP">
+            <karp:e n="0" name="и">и</karp:e>
+            <karp:text n="1" />
+            <karp:e n="2" name="Action">сдашь.</karp:e>
+            <karp:g n="3" />
+          </karp:e>
+          <karp:text n="3" />
+        </karp:example>
+        <definition>
+          <karp:text n="0">Конструкция используется для того, чтобы
+          показать временное совпадение,
+          своевременность</karp:text>
+          <karp:e n="1" name="Action">действия.</karp:e>
+        </definition>
+        <konst:int_const_elem cat="NP" msd="NounType=Nom"
+        name="Agent" role="Agent" />
+        <konst:int_const_elem msd="и" name="и" role="и" />
+        <konst:int_const_elem cat="VP" name="Action"
+        role="Action" />
+      </Sense>
+    </LexicalEntry>
+    <LexicalEntry xml:lang="rus">
+      <Lemma />
       <Sense id="konstruktikon-rus--NP-Nom_приходиться_NP-Dat_NP-Ins">
 
         <feat att="illustration"
@@ -17299,6 +17887,68 @@
         name="полный" />
         <konst:int_const_elem cat="NP" msd="Type=Abstr"
         name="Abstract" role="Object" />
+      </Sense>
+    </LexicalEntry>
+    <LexicalEntry xml:lang="rus">
+      <Lemma />
+      <Sense id="konstruktikon-rus--NP-Nom_(это)_ещё_ничего">
+        <feat att="illustration" val="Это ещё ничего" />
+        <feat att="type" val="konstruktion" />
+        <feat att="cee" val="ещё" />
+        <feat att="cee" val="ничего" />
+        <feat att="structure" val="[NP-Nom[(это)[ещё[ничего]]]]" />
+        <karp:example>
+          <karp:e n="0" name="NP-Nom_(это)_ещё_ничего">
+            <karp:e n="0" name="Theme">Достижения этого
+            года</karp:e>
+            <karp:text n="1" />
+            <karp:e n="2" name="ещё">еще</karp:e>
+            <karp:text n="3" />
+            <karp:e n="4" name="ничего">ничего</karp:e>
+            <karp:g n="5" />
+            <karp:text n="6" />
+          </karp:e>
+          <karp:g n="1" />
+          <karp:text n="2">, посмотрим, что будет через пять
+          лет.</karp:text>
+        </karp:example>
+        <karp:example>
+          <karp:e n="0" name="NP-Nom_(это)_ещё_ничего">
+            <karp:e n="0" name="Theme">Холод</karp:e>
+            <karp:text n="1" />
+            <karp:e n="2" name="это">это</karp:e>
+            <karp:text n="3" />
+            <karp:e n="4" name="ещё">ещё</karp:e>
+            <karp:text n="5" />
+            <karp:e n="6" name="ничего">ничего.</karp:e>
+            <karp:g n="7" />
+          </karp:e>
+        </karp:example>
+        <karp:example>
+          <karp:e n="0" name="NP-Nom_(это)_ещё_ничего">
+            <karp:e n="0" name="Theme">Он-то</karp:e>
+            <karp:text n="1" />
+            <karp:e n="2" name="ещё">ещё</karp:e>
+            <karp:text n="3" />
+            <karp:e n="4" name="ничего">ничего</karp:e>
+            <karp:g n="5" />
+          </karp:e>
+          <karp:g n="1" />
+          <karp:text n="2">, к нему я привык.</karp:text>
+        </karp:example>
+        <definition>
+          <karp:text n="0">Конструкция обозначает, что говорящий
+          выражает терпение, принятие какой-либо</karp:text>
+          <karp:e n="1" name="Theme">ситуации</karp:e>
+          <karp:text n="2">по сравнению с чем-нибудь
+          худшим.</karp:text>
+        </definition>
+        <konst:int_const_elem lu="ещё" name="ещё" role="ещё" />
+        <konst:int_const_elem lu="ничто" name="ничего"
+        role="ничего" />
+        <konst:int_const_elem cat="NP" msd="NounType=Nom"
+        name="Theme" role="Theme" />
+        <konst:int_const_elem lu="это" name="это" role="это" />
       </Sense>
     </LexicalEntry>
     <LexicalEntry xml:lang="rus">
@@ -19587,82 +20237,71 @@
     </LexicalEntry>
     <LexicalEntry xml:lang="rus">
       <Lemma />
-      <Sense id="konstruktikon-rus--NP_того_стоить">
-        <feat att="illustration" val="Плавание того стоит" />
+      <Sense id="konstruktikon-rus--NP-Acc_звать_NP-Ins/NP">
+        <feat att="illustration" val="мальчика звать Юрой" />
+        <feat att="coll" val="звать" />
         <feat att="type" val="konstruktion" />
-        <feat att="cee" val="того" />
-        <feat att="cee" val="стоит" />
-        <feat att="structure" val="[NP] [[того] стоит]" />
+        <feat att="cee" val="звать" />
+        <feat att="cee" val="зовут" />
+        <feat att="structure"
+        val="[NP-Acc] [звать [NP-Instr/NP]]" />
         <karp:example>
-          <karp:text n="0">Не те годы, чтобы питаться консервами,
-          но наше</karp:text>
-          <karp:e n="1" name="NP_того_стоит">
-            <karp:g n="0" />
-            <karp:e n="1" name="Situation">дело</karp:e>
-            <karp:text n="2" />
-            <karp:e n="3" name="того">того</karp:e>
-            <karp:text n="4" />
-            <karp:e n="5" name="cтоит">стоило</karp:e>
-            <karp:g n="6" />
-            <karp:text n="7" />
-          </karp:e>
-          <karp:g n="2" />
-          <karp:text n="3">!</karp:text>
-        </karp:example>
-        <karp:example>
-          <karp:text n="0">В свое время он заплатил за</karp:text>
-          <karp:e n="1" name="Object">квартиру</karp:e>
-          <karp:text n="2">бешеные деньги, но</karp:text>
-          <karp:e n="3" name="NP_того_стоит">
-            <karp:e n="0" name="Object">она</karp:e>
+          <karp:text n="0">Кот вдруг возразил: ―</karp:text>
+          <karp:e n="1" name="NP-Acc_звать_NP-Instr/NP">
+            <karp:e n="0" name="Participant">Меня</karp:e>
             <karp:text n="1" />
-            <karp:e n="2" name="того">того</karp:e>
+            <karp:e n="2" name="звать">звать</karp:e>
             <karp:text n="3" />
-            <karp:e n="4" name="cтоить">стоила</karp:e>
-            <karp:text n="5" />
+            <karp:e n="4" name="Name">Мельхиор</karp:e>
           </karp:e>
-          <karp:text n="4">.</karp:text>
+          <karp:text n="2">. А вас?</karp:text>
         </karp:example>
         <karp:example>
-          <karp:text n="0">В прошлом мае первый зампредседателя
-          правительства Виктор Зубков объявил, что будет запущен
-          процесс реконструкции за 1200 миллионов рублей.
-          Но</karp:text>
-          <karp:e n="1" name="NP_того_стоит.">
-            <karp:g n="0" />
-            <karp:e n="1" name="Situation">результат</karp:e>
-            <karp:text n="2" />
-            <karp:e n="3" name="того">того</karp:e>
-            <karp:text n="4" />
-            <karp:e n="5" name="cтоит">стоит</karp:e>
-            <karp:g n="6" />
-            <karp:text n="7" />
+          <karp:e n="0" name="NP-Acc_звать_NP-Instr/NP">
+            <karp:e n="0" name="Participant">Мальчика</karp:e>
+            <karp:text n="1" />
+            <karp:e n="2" name="звать">звать</karp:e>
+            <karp:text n="3" />
+            <karp:e n="4" name="Name">Василий</karp:e>
+            <karp:g n="5" />
           </karp:e>
-          <karp:text n="2">Уже обнаружили десятки разрушенных
-          построек (удалось даже найти комплекс по производству
-          колоколов эпохи патриарха Никона).</karp:text>
+          <karp:text n="1">.</karp:text>
+        </karp:example>
+        <karp:example>
+          <karp:e n="0" name="NP-Acc_звать_NP-Instr/NP">
+            <karp:e n="0" name="Participant">Этого пса</karp:e>
+            <karp:text n="1" />
+            <karp:e n="2" name="звать">звать</karp:e>
+            <karp:text n="3" />
+            <karp:e n="4" name="Name">Наполеон Третий</karp:e>
+            <karp:g n="5" />
+          </karp:e>
+          <karp:text n="1">!</karp:text>
         </karp:example>
         <definition>
-          <karp:text n="0">Конструкция используется для того, чтобы
-          показать, что</karp:text>
-          <karp:e n="1" name="Object">некоторый объект</karp:e>
-          <karp:text n="2">или</karp:text>
-          <karp:e n="3" name="Situation">случившаяся
-          ситуация</karp:e>
-          <karp:text n="4">полностью оправдывают все затраты и
-          труды, которые требуются или требовались ранее. Говорящий
-          доволен результатом. Допускается использование
-          конструкции в настоящем и прошедшем времени (основной
-          глагол</karp:text>
-          <karp:e n="5" name="cтоить">"стоить"</karp:e>
-          <karp:text n="6">согласуется с подлежащим).</karp:text>
+          <karp:text n="0">Безличная конструкция для
+          передачи</karp:text>
+          <karp:e n="1" name="Name">имени</karp:e>
+          <karp:text n="2" />
+          <karp:e n="3" name="Participant">участника</karp:e>
+          <karp:text n="4">. Допускается использование глагола в
+          форме "зовут".</karp:text>
         </definition>
-        <konst:int_const_elem cat="NP" msd="NounType=Nom"
-        name="Object" role="Object" />
-        <konst:int_const_elem lu="тот" name="того" />
-        <konst:int_const_elem lu="стоить" name="cтоить" />
-        <konst:int_const_elem cat="NP" msd="NounType=Nom"
-        name="Situation" role="Situation" />
+        <definition xml:lang="eng">
+          <karp:text n="0">Impersonal construction for
+          communicating the</karp:text>
+          <karp:e n="1" name="Name">name</karp:e>
+          <karp:text n="2">of a</karp:text>
+          <karp:e n="3" name="Participant.">participant</karp:e>
+          <karp:text n="4">It is also possible to use the verb form
+          "зовут" in this construction.</karp:text>
+        </definition>
+        <konst:int_const_elem cat="NP" msd="NounType=Acc"
+        name="Participant" role="Participant" />
+        <konst:int_const_elem cat="VP" lu="звать"
+        msd="VerbType=Inf" name="звать" />
+        <konst:int_const_elem aux="NounType=Nominative" cat="NP"
+        msd="NounType=Instrum" name="Name" role="Name" />
       </Sense>
     </LexicalEntry>
     <LexicalEntry xml:lang="rus">
@@ -20976,6 +21615,150 @@
     </LexicalEntry>
     <LexicalEntry xml:lang="rus">
       <Lemma />
+      <Sense id="konstruktikon-rus--Ну/так_уж_(и)_Cl">
+        <feat att="illustration" val="Ну уж пошел!" />
+        <feat att="type" val="konstruktion" />
+        <feat att="inheritance" val="None" />
+        <feat att="cee" val="ну" />
+        <feat att="cee" val="уж" />
+        <feat att="cee" val="и" />
+        <feat att="structure" val="[Ну/так[уж[и[Cl]]]]" />
+        <karp:example>
+          <karp:e n="0" name="Ну_уж_(и)_Cl">
+            <karp:e n="0" name="ну">Ну</karp:e>
+            <karp:text n="1" />
+            <karp:e n="2" name="уж">уж</karp:e>
+            <karp:g n="3" />
+            <karp:e n="4" name="и">и</karp:e>
+            <karp:text n="5" />
+            <karp:e n="6" name="Situation">ты тоже хороша!</karp:e>
+            <karp:g n="7" />
+            <karp:text n="8" />
+          </karp:e>
+        </karp:example>
+        <karp:example>
+          <karp:e n="0" name="Ну_уж_(и)_Cl">
+            <karp:e n="0" name="ну">Ну</karp:e>
+            <karp:text n="1" />
+            <karp:e n="2" name="уж">уж</karp:e>
+            <karp:text n="3" />
+            <karp:e n="4" name="и">и</karp:e>
+            <karp:text n="5" />
+            <karp:e n="6" name="Situation">молода</karp:e>
+            <karp:g n="7" />
+            <karp:text n="8" />
+          </karp:e>
+          <karp:text n="1">! Сорок два года ― не
+          молодость.</karp:text>
+        </karp:example>
+        <karp:example>
+          <karp:e n="0" name="Ну_уж_(и)_Cl">
+            <karp:e n="0" name="ну">Ну</karp:e>
+            <karp:text n="1" />
+            <karp:e n="2" name="уж">уж</karp:e>
+            <karp:text n="3" />
+            <karp:e n="4" name="Situation">ты тоже выбрал
+            профессию</karp:e>
+            <karp:g n="5" />
+          </karp:e>
+          <karp:g n="1" />
+          <karp:text n="2">, ― Люба качнула головой. Но мы же
+          теперь выяснили, что я не бухгалтер.</karp:text>
+        </karp:example>
+        <karp:example>
+          <karp:text n="0">Он спалил весь дома.</karp:text>
+          <karp:e n="1" name="так_уж_(и)_Cl">
+            <karp:e n="0" name="так">Так</karp:e>
+            <karp:text n="1" />
+            <karp:e n="2" name="уж">уж</karp:e>
+            <karp:text n="3" />
+            <karp:e n="4" name="и">и</karp:e>
+            <karp:text n="5" />
+            <karp:e n="6" name="Situation">весь!</karp:e>
+            <karp:g n="7" />
+          </karp:e>
+        </karp:example>
+        <definition>
+          <karp:text n="0">Конструкция используется для обозначения
+          недоверия или недовольствия</karp:text>
+          <karp:e n="1" name="Situation">ситуацией</karp:e>
+          <karp:text n="2">говорящим.</karp:text>
+        </definition>
+        <konst:int_const_elem lu="ну" name="ну" role="ну" />
+        <konst:int_const_elem lu="уж" name="уж" role="уж" />
+        <konst:int_const_elem cat="Cl" name="Situation"
+        role="Situation" />
+        <konst:int_const_elem lu="так" name="так" role="так" />
+        <konst:int_const_elem lu="и" name="и" role="и" />
+      </Sense>
+    </LexicalEntry>
+    <LexicalEntry xml:lang="rus">
+      <Lemma />
+      <Sense id="konstruktikon-rus--VP-Imper_ещё_(мне/(у)_меня)">
+        <feat att="illustration" val="Разговаривай ещё" />
+        <feat att="type" val="konstruktion" />
+        <feat att="cee" val="ещё" />
+        <feat att="cee" val="и" />
+        <feat att="cee" val="меня" />
+        <feat att="cee" val="разговаривай" />
+        <feat att="structure"
+        val="[VP-Imper[ещё[(мне/(у) меня)]]]]" />
+        <karp:example>
+          <karp:e n="0" name="VP-Imper_ещё_((у)_меня)">
+            <karp:e n="0" name="Action">Покричи</karp:e>
+            <karp:text n="1" />
+            <karp:e n="2" name="ещё">ещё</karp:e>
+            <karp:text n="3" />
+            <karp:e n="4" name="у">у</karp:e>
+            <karp:text n="5" />
+            <karp:e n="6" name="меня">меня</karp:e>
+            <karp:text n="7" />
+          </karp:e>
+          <karp:g n="1" />
+          <karp:text n="2">! -- разозлилась мама.</karp:text>
+        </karp:example>
+        <karp:example>
+          <karp:e n="0" name="VP-Imper_ещё_(мне)">
+            <karp:e n="0" name="Action">Поспорь</karp:e>
+            <karp:text n="1" />
+            <karp:e n="2" name="ещё">ещё</karp:e>
+            <karp:text n="3" />
+            <karp:e n="4" name="мне">мне</karp:e>
+            <karp:text n="5">!</karp:text>
+          </karp:e>
+          <karp:text n="1">Я у докторов спрашивал.</karp:text>
+        </karp:example>
+        <karp:example>
+          <karp:e n="0" name="VP-Imper_ещё_(меня)">
+            <karp:e n="0" name="Action">Учи</karp:e>
+            <karp:text n="1" />
+            <karp:e n="2" name="меня">меня</karp:e>
+            <karp:text n="3" />
+            <karp:e n="4" name="ещё">ещё</karp:e>
+            <karp:g n="5" />
+            <karp:text n="6" />
+          </karp:e>
+          <karp:text n="1">! Я без тебя это знаю.</karp:text>
+        </karp:example>
+        <definition>
+          <karp:text n="0">Конструкция обозначает, что говорящий
+          выражает угрозу и недовольство</karp:text>
+          <karp:e n="1" name="Action">действиями</karp:e>
+          <karp:text n="2">участника ситуации. В конструкции часто
+          используется сочетания "у меня" "мне" "меня".</karp:text>
+        </definition>
+        <konst:int_const_elem cat="VP" msd="VerbType=Imper"
+        name="Action" role="Action" />
+        <konst:int_const_elem lu="ещё" name="ещё" role="ещё" />
+        <konst:int_const_elem lu="я" msd="Type=Dat" name="мне"
+        role="мне" />
+        <konst:int_const_elem msd="Type=Gen" name="меня"
+        role="меня" />
+        <konst:int_const_elem lu="у" name="у" role="у" />
+      </Sense>
+    </LexicalEntry>
+    <LexicalEntry xml:lang="rus">
+      <Lemma />
       <Sense id="konstruktikon-rus--Размером|величиной_с_NP-Acc">
         <feat att="comment"
         val="Похожие, но не такие частотные конструкции: величиной/шириной/ростом/площадью/весом/длиной" />
@@ -21061,69 +21844,6 @@
         <konst:int_const_elem cat="Prep" name="с" />
         <konst:int_const_elem cat="NP" lu="величина"
         msd="NounType=Instr" name="величиной" />
-      </Sense>
-    </LexicalEntry>
-    <LexicalEntry xml:lang="rus">
-      <Lemma />
-      <Sense id="konstruktikon-rus--ну_и_NP-Nom!">
-        <feat att="illustration" val="ну и ночь!" />
-        <feat att="type" val="konstruktion" />
-        <feat att="cee" val="ну" />
-        <feat att="cee" val="и" />
-        <feat att="cee" val="!" />
-        <feat att="structure" val="[ну и [NP]]" />
-        <karp:example>
-          <karp:e n="0" name="ну_и_NP!">
-            <karp:e n="0" name="ну">Ну</karp:e>
-            <karp:text n="1" />
-            <karp:e n="2" name="и">и</karp:e>
-            <karp:text n="3" />
-            <karp:e n="4" name="Stimulus">местечко</karp:e>
-            <karp:g n="5" />
-            <karp:text n="6" />
-          </karp:e>
-          <karp:text n="1">выбрали они для ночлега!</karp:text>
-        </karp:example>
-        <karp:example>
-          <karp:text n="0">Старуха взяла деньги и сказала, что её
-          зовут Октябрина Михайловна.</karp:text>
-          <karp:e n="1" name="ну_и_NP!">
-            <karp:e n="0" name="ну">Ну</karp:e>
-            <karp:text n="1" />
-            <karp:e n="2" name="и">и</karp:e>
-            <karp:text n="3" />
-            <karp:e n="4" name="Stimulus">имя</karp:e>
-            <karp:text n="5" />
-          </karp:e>
-          <karp:g n="2" />
-          <karp:text n="3">.</karp:text>
-        </karp:example>
-        <karp:example>
-          <karp:text n="0">В Вашингтоне не скрыли своего удивления:
-          ―</karp:text>
-          <karp:e n="1" name="ну_и_NP!">
-            <karp:e n="0" name="ну">Ну</karp:e>
-            <karp:text n="1" />
-            <karp:e n="2" name="и">и</karp:e>
-            <karp:text n="3" />
-            <karp:e n="4" name="Stimulus">дела</karp:e>
-            <karp:text n="5" />
-          </karp:e>
-          <karp:text n="2">! Звонишь хозяину Кремля, а у него в
-          гостях британский премьер…</karp:text>
-        </karp:example>
-        <definition>
-          <karp:text n="0">Конструкция выражает удивление
-          говорящего от</karp:text>
-          <karp:e n="1" name="Stimulus">некоторого объекта или
-          ситуации</karp:e>
-          <karp:text n="2">. Говорящий ожидал лучшего. Часто на
-          письме сопровождается восклицательным знаком.</karp:text>
-        </definition>
-        <konst:int_const_elem lu="ну" name="ну" />
-        <konst:int_const_elem lu="и" name="и" />
-        <konst:int_const_elem cat="NP" msd="NounType=Nom"
-        name="Stimulus" role="Stimulus" />
       </Sense>
     </LexicalEntry>
     <LexicalEntry xml:lang="rus">
@@ -21737,25 +22457,53 @@
         <feat att="cee" val="беси" />
         <feat att="structure" val="[лучше[VP-Imper]]" />
         <karp:example>
-          <karp:text n="0">Лучше не спрашивай!</karp:text>
+          <karp:e n="0" name="лучше_VP-Imper">
+            <karp:e n="0" name="лучше">Лучше</karp:e>
+            <karp:text n="1" />
+            <karp:e n="2" name="Action">не спрашивай!</karp:e>
+            <karp:g n="3" />
+          </karp:e>
         </karp:example>
         <karp:example>
-          <karp:text n="0">Приезжай лучше ко мне в
-          гости.</karp:text>
+          <karp:e n="0" name="лучше_VP-Imper">
+            <karp:e n="0" name="Action">Приезжай</karp:e>
+            <karp:text n="1" />
+            <karp:e n="2" name="лучше">лучше</karp:e>
+            <karp:g n="3" />
+          </karp:e>
+          <karp:text n="1">ко мне в гости.</karp:text>
         </karp:example>
         <karp:example>
-          <karp:text n="0">Хватит смотреть телевизор, лучше сходи в
-          кино.</karp:text>
+          <karp:text n="0">Хватит смотреть телевизор,</karp:text>
+          <karp:e n="1" name="лучше_VP-Imper">
+            <karp:e n="0" name="лучше">лучше</karp:e>
+            <karp:text n="1" />
+            <karp:e n="2" name="Action">сходи в кино.</karp:e>
+            <karp:g n="3" />
+          </karp:e>
         </karp:example>
         <karp:example>
-          <karp:text n="0">Лучше не зли его сегодня!</karp:text>
+          <karp:e n="0" name="лучше_VP-Imper">
+            <karp:e n="0" name="лучше">Лучше</karp:e>
+            <karp:text n="1" />
+            <karp:e n="2" name="Action">не зли</karp:e>
+            <karp:g n="3" />
+          </karp:e>
+          <karp:text n="1">его сегодня!</karp:text>
         </karp:example>
         <definition>
           <karp:text n="0">Конструкция обозначает, что говорящий
-          подчёркивает предпочтительности какого-либо действия
-          вместо другого, побуждает участника (не) сделать
-          что-либо</karp:text>
+          подчёркивает</karp:text>
+          <karp:e n="1" name="лучше">предпочтительности</karp:e>
+          <karp:text n="2">какого-либо</karp:text>
+          <karp:e n="3" name="Action">действия</karp:e>
+          <karp:text n="4">вместо другого, побуждает участника (не)
+          сделать что-либо.</karp:text>
         </definition>
+        <konst:int_const_elem lu="лучше" name="лучше"
+        role="лучше" />
+        <konst:int_const_elem cat="VP" msd="VerbType=Imper"
+        name="Action" role="Action" />
       </Sense>
     </LexicalEntry>
     <LexicalEntry xml:lang="rus">
@@ -22035,68 +22783,6 @@
     </LexicalEntry>
     <LexicalEntry xml:lang="rus">
       <Lemma />
-      <Sense id="konstruktikon-rus--NP-Nom_из_AP-Gen">
-        <feat att="illustration" val="человек из любопытных" />
-        <feat att="type" val="konstruktion" />
-        <feat att="cee" val="из" />
-        <feat att="cee" val="человек" />
-        <feat att="structure" val="[NP-Nom[из[ADJP-Gen]]]" />
-        <karp:example>
-          <karp:text n="0">Это были</karp:text>
-          <karp:e n="1" name="NP-Nom_из_ADJP-Gen">
-            <karp:e n="0" name="Theme">разговоры</karp:e>
-            <karp:text n="1" />
-            <karp:e n="2" name="из">из</karp:e>
-            <karp:text n="3" />
-            <karp:e n="4" name="Evaluation">деловых</karp:e>
-            <karp:g n="5" />
-          </karp:e>
-          <karp:g n="2" />
-          <karp:text n="3">, которые позволяли выяснить многое
-          неявное в поведении и взаимоотношениях ребят.</karp:text>
-        </karp:example>
-        <karp:example>
-          <karp:text n="0">Если город ― лучшее место для того,
-          чтобы спрятаться, то лучшее прикрытие ― это
-          подружка,</karp:text>
-          <karp:e n="1" name="NP-Nom_из_ADJP-Gen">
-            <karp:e n="0" name="Theme">девушка</karp:e>
-            <karp:text n="1" />
-            <karp:e n="2" name="из">из</karp:e>
-            <karp:text n="3" />
-            <karp:e n="4" name="Evaluation">местных</karp:e>
-          </karp:e>
-        </karp:example>
-        <karp:example>
-          <karp:text n="0">С нами в общежитии жил один</karp:text>
-          <karp:e n="1" name="NP-Nom_из_ADJP-Gen">
-            <karp:e n="0" name="Theme">турист</karp:e>
-            <karp:text n="1" />
-            <karp:e n="2" name="из">из</karp:e>
-            <karp:text n="3" />
-            <karp:e n="4" name="Evaluation">бедных</karp:e>
-            <karp:text n="5" />
-          </karp:e>
-        </karp:example>
-        <definition>
-          <karp:text n="0">Конструкция используется, чтобы
-          подчеркнуть, что</karp:text>
-          <karp:e n="1" name="Theme">некоторый объект</karp:e>
-          <karp:text n="2">обладает</karp:text>
-          <karp:e n="3" name="Evaluation">каким-либо
-          признаком</karp:e>
-          <karp:text n="4">, характеризующий определенную группу
-          или тип людей.</karp:text>
-        </definition>
-        <konst:int_const_elem cat="NP" msd="NounType=Nom"
-        name="Theme" role="Theme" />
-        <konst:int_const_elem lu="из" name="из" role="из" />
-        <konst:int_const_elem aux="plural" cat="ADJP"
-        msd="AdjType=Gen" name="Evaluation" role="Evaluation" />
-      </Sense>
-    </LexicalEntry>
-    <LexicalEntry xml:lang="rus">
-      <Lemma />
       <Sense id="konstruktikon-rus--V_VP">
         <feat att="illustration" val="пойду узнаю" />
         <feat att="type" val="konstruktion" />
@@ -22313,6 +22999,10 @@
         <feat att="cee" val="не" />
         <feat att="cee" val="говори" />
         <feat att="structure" val="[(и) не говори(те)]!" />
+        <feat att="structure"
+        val="[root [advmod не] говорить-Imper]" />
+        <feat att="structure"
+        val="[root [cc и] [advmod не] говорить-Imper]" />
         <karp:example>
           <karp:text n="0">Да, нелегкое сейчас время,</karp:text>
           <karp:e n="1" name="(и)_не_говори(те)!">
@@ -22362,7 +23052,7 @@
         </definition>
         <konst:int_const_elem name="и" />
         <konst:int_const_elem name="не" />
-        <konst:int_const_elem lu="говорить" msd="VerbType=Imp"
+        <konst:int_const_elem lu="говорить" msd="Mood=Imp|Pers=2"
         name="говори(те)" role="говори(те)" />
       </Sense>
     </LexicalEntry>
@@ -22760,33 +23450,83 @@
     </LexicalEntry>
     <LexicalEntry xml:lang="rus">
       <Lemma />
-      <Sense id="konstruktikon-rus--NP_и_так_Cl_(а)_Cl">
+      <Sense id="konstruktikon-rus--NP_и_так__VP_(а)_Cl">
         <feat att="illustration"
         val="мне и так плохо, а ты ещё лезешь с вопросами" />
         <feat att="type" val="konstruktion" />
         <feat att="cee" val="и" />
         <feat att="cee" val="так" />
         <feat att="cee" val="None" />
-        <feat att="structure" val="[NP[и так[Cl[(а)[Cl]]]]]" />
+        <feat att="structure" val="[NP[и так[VP[(а)[Cl]]]]]" />
         <karp:example>
-          <karp:text n="0">Он и так нам уже надоел, а тут снова
-          явился с утра со своими вопросами</karp:text>
+          <karp:e n="0" name="NP_и_так__VP_(а)_Cl">
+            <karp:text n="0">Он</karp:text>
+            <karp:e n="1" name="и">и</karp:e>
+            <karp:text n="2" />
+            <karp:e n="3" name="так">так</karp:e>
+            <karp:text n="4" />
+            <karp:e n="5" name="Beneficiary">нам</karp:e>
+            <karp:text n="6">уже</karp:text>
+            <karp:e n="7" name="State">надоел</karp:e>
+            <karp:g n="8" />
+            <karp:text n="9">,</karp:text>
+            <karp:e n="10" name="а">а</karp:e>
+            <karp:text n="11">тут</karp:text>
+            <karp:e n="12" name="Action">снова явился с утра со
+            своими вопросами.</karp:e>
+            <karp:g n="13" />
+            <karp:text n="14" />
+          </karp:e>
         </karp:example>
         <karp:example>
-          <karp:text n="0">Папа и так уже расстроен, перестань его
-          трогать</karp:text>
+          <karp:e n="0" name="NP_и_так__VP_(а)_Cl">
+            <karp:e n="0" name="Beneficiary">Папа</karp:e>
+            <karp:text n="1" />
+            <karp:e n="2" name="и">и</karp:e>
+            <karp:text n="3" />
+            <karp:e n="4" name="так">так</karp:e>
+            <karp:text n="5">уже</karp:text>
+            <karp:e n="6" name="State">расстроен</karp:e>
+            <karp:g n="7" />
+            <karp:text n="8">,</karp:text>
+            <karp:e n="9" name="Action">перестань его
+            трогать.</karp:e>
+            <karp:g n="10" />
+          </karp:e>
         </karp:example>
         <karp:example>
-          <karp:text n="0">Я и так не высыпаюсь, а ты тут концерты
-          устраиваешь</karp:text>
+          <karp:e n="0" name="NP_и_так__VP_(а)_Cl">
+            <karp:e n="0" name="Beneficiary">Я</karp:e>
+            <karp:text n="1" />
+            <karp:e n="2" name="и">и</karp:e>
+            <karp:text n="3" />
+            <karp:e n="4" name="так">так</karp:e>
+            <karp:text n="5" />
+            <karp:e n="6" name="State">не высыпаюсь</karp:e>
+            <karp:g n="7" />
+            <karp:text n="8">,</karp:text>
+            <karp:e n="9" name="а">а</karp:e>
+            <karp:text n="10" />
+            <karp:e n="11" name="Action">ты тут концерты
+            устраиваешь.</karp:e>
+            <karp:g n="12" />
+          </karp:e>
         </karp:example>
         <definition>
           <karp:text n="0">Конструкция выражает усиленное
           подчеркивание</karp:text>
           <karp:e n="1" name="Action,">некоторого действия</karp:e>
           <karp:text n="2">которое долго не прекращается и в связи
-          с чем чучастник испытывает негативные эмоции</karp:text>
+          с чем участник испытывает негативные эмоции</karp:text>
         </definition>
+        <konst:int_const_elem lu="и" name="и" role="и" />
+        <konst:int_const_elem lu="так" name="так" role="так" />
+        <konst:int_const_elem lu="а" name="а" role="а" />
+        <konst:int_const_elem cat="Cl" name="Action"
+        role="Action" />
+        <konst:int_const_elem cat="NP" name="Beneficiary"
+        role="Beneficiary" />
+        <konst:int_const_elem cat="VP" name="State" role="State" />
       </Sense>
     </LexicalEntry>
     <LexicalEntry xml:lang="rus">
@@ -25929,6 +26669,10 @@
         <feat att="cee" val="положено" />
         <feat att="structure"
         val="[NP-Dat] [не положено [VP-Inf]]" />
+        <feat att="structure"
+        val="[root [advmod не] положено [csubj VP-Inf]]" />
+        <feat att="structure"
+        val="[root [obl NP-Dat] [advmod не] положено [csubj VP-Inf]]" />
         <karp:example>
           <karp:text n="0">В мае</karp:text>
           <karp:e n="1" name="(NP-Dat)_не_положено_VP-Inf">
@@ -26420,6 +27164,68 @@
     </LexicalEntry>
     <LexicalEntry xml:lang="rus">
       <Lemma />
+      <Sense id="konstruktikon-rus--NP-Nom_из_AP-Gen">
+        <feat att="illustration" val="человек из любопытных" />
+        <feat att="type" val="konstruktion" />
+        <feat att="cee" val="из" />
+        <feat att="cee" val="человек" />
+        <feat att="structure" val="[NP-Nom[из[ADJP-Gen]]]" />
+        <karp:example>
+          <karp:text n="0">Это были</karp:text>
+          <karp:e n="1" name="NP-Nom_из_ADJP-Gen">
+            <karp:e n="0" name="Theme">разговоры</karp:e>
+            <karp:text n="1" />
+            <karp:e n="2" name="из">из</karp:e>
+            <karp:text n="3" />
+            <karp:e n="4" name="Evaluation">деловых</karp:e>
+            <karp:g n="5" />
+          </karp:e>
+          <karp:g n="2" />
+          <karp:text n="3">, которые позволяли выяснить многое
+          неявное в поведении и взаимоотношениях ребят.</karp:text>
+        </karp:example>
+        <karp:example>
+          <karp:text n="0">Если город ― лучшее место для того,
+          чтобы спрятаться, то лучшее прикрытие ― это
+          подружка,</karp:text>
+          <karp:e n="1" name="NP-Nom_из_ADJP-Gen">
+            <karp:e n="0" name="Theme">девушка</karp:e>
+            <karp:text n="1" />
+            <karp:e n="2" name="из">из</karp:e>
+            <karp:text n="3" />
+            <karp:e n="4" name="Evaluation">местных</karp:e>
+          </karp:e>
+        </karp:example>
+        <karp:example>
+          <karp:text n="0">С нами в общежитии жил один</karp:text>
+          <karp:e n="1" name="NP-Nom_из_ADJP-Gen">
+            <karp:e n="0" name="Theme">турист</karp:e>
+            <karp:text n="1" />
+            <karp:e n="2" name="из">из</karp:e>
+            <karp:text n="3" />
+            <karp:e n="4" name="Evaluation">бедных</karp:e>
+            <karp:text n="5" />
+          </karp:e>
+        </karp:example>
+        <definition>
+          <karp:text n="0">Конструкция используется, чтобы
+          подчеркнуть, что</karp:text>
+          <karp:e n="1" name="Theme">некоторый объект</karp:e>
+          <karp:text n="2">обладает</karp:text>
+          <karp:e n="3" name="Evaluation">каким-либо
+          признаком</karp:e>
+          <karp:text n="4">, характеризующий определенную группу
+          или тип людей.</karp:text>
+        </definition>
+        <konst:int_const_elem cat="NP" msd="NounType=Nom"
+        name="Theme" role="Theme" />
+        <konst:int_const_elem lu="из" name="из" role="из" />
+        <konst:int_const_elem aux="plural" cat="ADJP"
+        msd="AdjType=Gen" name="Evaluation" role="Evaluation" />
+      </Sense>
+    </LexicalEntry>
+    <LexicalEntry xml:lang="rus">
+      <Lemma />
       <Sense id="konstruktikon-rus--VP_себе_(и)VP">
         <feat att="illustration" val="стою себе думаю" />
         <feat att="type" val="konstruktion" />
@@ -26428,32 +27234,86 @@
         <feat att="cee" val="думаю" />
         <feat att="structure" val="[VP[себе[(и)VP]]]" />
         <karp:example>
-          <karp:text n="0">Сяду себе в уголочке и читаю целый
-          день</karp:text>
+          <karp:e n="0" name="VP_себе_(и)VP">
+            <karp:e n="0" name="Activity">Сяду</karp:e>
+            <karp:text n="1" />
+            <karp:e n="2" name="себе">себе</karp:e>
+            <karp:text n="3">в уголочке</karp:text>
+            <karp:e n="4" name="и">и</karp:e>
+            <karp:text n="5" />
+            <karp:e n="6" name="Action">читаю</karp:e>
+            <karp:g n="7" />
+          </karp:e>
+          <karp:text n="1">целый день.</karp:text>
         </karp:example>
         <karp:example>
-          <karp:text n="0">Вы себе сидите, отдыхайте!</karp:text>
+          <karp:text n="0">Вы</karp:text>
+          <karp:e n="1" name="VP_себе_(и)VP">
+            <karp:e n="0" name="себе">себе</karp:e>
+            <karp:text n="1" />
+            <karp:e n="2" name="Activity">сидите</karp:e>
+            <karp:g n="3" />
+            <karp:text n="4">,</karp:text>
+            <karp:e n="5" name="Action">отдыхайте!</karp:e>
+            <karp:g n="6" />
+            <karp:text n="7" />
+          </karp:e>
         </karp:example>
         <karp:example>
-          <karp:text n="0">Его ругают, а он стоит себе
-          молчит.</karp:text>
+          <karp:text n="0">Его ругают, а он</karp:text>
+          <karp:e n="1" name="VP_себе_(и)VP">
+            <karp:e n="0" name="Activity">стоит</karp:e>
+            <karp:text n="1" />
+            <karp:e n="2" name="себе">себе</karp:e>
+            <karp:text n="3" />
+            <karp:e n="4" name="Action">молчит.</karp:e>
+            <karp:g n="5" />
+            <karp:text n="6" />
+          </karp:e>
         </karp:example>
         <karp:example>
-          <karp:text n="0">А он себе идет вперед и тебя не
-          замечает</karp:text>
+          <karp:text n="0">А он</karp:text>
+          <karp:e n="1" name="VP_себе_(и)VP">
+            <karp:e n="0" name="себе">себе</karp:e>
+            <karp:text n="1" />
+            <karp:e n="2" name="Activity">идет</karp:e>
+            <karp:text n="3">вперед и тебя</karp:text>
+            <karp:e n="4" name="Action">не замечает.</karp:e>
+            <karp:g n="5" />
+            <karp:text n="6" />
+          </karp:e>
         </karp:example>
         <karp:example>
-          <karp:text n="0">Дай, думаю себе, посмотрю новый
-          фильм</karp:text>
+          <karp:text n="0">Дай,</karp:text>
+          <karp:e n="1" name="VP_себе_(и)VP">
+            <karp:e n="0" name="Activity">думаю</karp:e>
+            <karp:text n="1" />
+            <karp:e n="2" name="себе">себе</karp:e>
+            <karp:g n="3" />
+            <karp:text n="4">,</karp:text>
+            <karp:e n="5" name="Action">посмотрю</karp:e>
+            <karp:g n="6" />
+            <karp:text n="7" />
+          </karp:e>
+          <karp:text n="2">новый фильм.</karp:text>
         </karp:example>
         <definition>
           <karp:text n="0">Конструкция обозначает продолжающееся,
-          свободное, независимое действие и как бы
-          противопоставляемого другому действия (в свое
-          удовольствие, в своих интересах). Частица себе находится
-          постпозитивно, соответственно, при глаголе или
-          местоимении</karp:text>
+          свободное, независимое</karp:text>
+          <karp:e n="1" name="Action">действие</karp:e>
+          <karp:text n="2">и как бы противопоставляемого
+          другому</karp:text>
+          <karp:e n="3" name="Activity">действия</karp:e>
+          <karp:text n="4">(в свое удовольствие, в своих
+          интересах). Частица себе находится постпозитивно,
+          соответственно, при глаголе или местоимении.</karp:text>
         </definition>
+        <konst:int_const_elem cat="VP" name="Activity"
+        role="Activity" />
+        <konst:int_const_elem lu="себе" name="себе" role="себе" />
+        <konst:int_const_elem cat="VP" name="Action"
+        role="Action" />
+        <konst:int_const_elem lu="и" name="и" role="и" />
       </Sense>
     </LexicalEntry>
     <LexicalEntry xml:lang="rus">
