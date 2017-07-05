@@ -148,41 +148,41 @@ for c in constructions:
 #     Inconsistent name
     inconsistent = consistent(c.name, allowed, illegal)
     if inconsistent:
-        out.write("Inconsistent tokens (name): {}.".format(", ".join(inconsistent)) + delim)
+        out.write("! Inconsistent tokens (name): {}.".format(", ".join(inconsistent)) + delim)
     if " " in c.name:
-        out.write("Illegal backspaces (name).\n")
+        out.write("! Illegal backspaces (name).\n")
 
     format_consistent = check_format(c.name)
     if not format_consistent:
-        out.write("Wrong format of annotation.\n")
+        out.write("! Wrong format of annotation.\n")
 
     if not c.illustration:
-        out.write("No illustration.\n")
+        out.write("! No illustration.\n")
     if len(c.structure) == 0:
-        out.write("No structure.\n")
+        out.write("! No structure.\n")
 
     if len(c.definition_rus) == 0:
-        out.write("No definition (rus).\n")
+        out.write("! No definition (rus).\n")
     else:
         if not def_rus_annotation:
-            out.write("Definition (rus) is not annotated.\n")
+            out.write("! Definition (rus) is not annotated.\n")
     if len(c.definition_eng) == 0:
-        out.write("No definition (eng).\n")
+        out.write("! No definition (eng).\n")
     else:
         if not def_rus_annotation:
-            out.write("Definition (eng) is not annotated.\n")
+            out.write("! Definition (eng) is not annotated.\n")
 
     def_rus_inconsistent = consistent(def_rus_annotation, allowed, illegal)
     if def_rus_inconsistent:
-        out.write("Inconsistent tokens (definition rus): {}.".format(", ".join(def_rus_inconsistent)) + delim)
+        out.write("! Inconsistent tokens (definition rus): {}.".format(", ".join(def_rus_inconsistent)) + delim)
 
     def_eng_inconsistent = consistent(def_eng_annotation, allowed, illegal)
     if def_eng_inconsistent:
-        out.write("Inconsistent tokens (definition eng): {}.".format(", ".join(def_eng_inconsistent)) + delim)
+        out.write("! Inconsistent tokens (definition eng): {}.".format(", ".join(def_eng_inconsistent)) + delim)
 
 #     Inconsistent examples
     if len(c.examples) < 3:
-        out.write("Insufficient number of examples ({} more needed).".format(3 - len(c.examples)) + delim)
+        out.write("! Insufficient number of examples ({} more needed).".format(3 - len(c.examples)) + delim)
 
     example_annotation = []
     for example in c.examples:
@@ -197,10 +197,10 @@ for c in constructions:
             for an in annotation:
                     example_annotation.append(an)
     if not example_annotation:
-        out.write("Examples are not annotated.\n")
+        out.write("! Examples are not annotated.\n")
     examples_inconsistent = consistent(example_annotation, allowed, illegal)
     if examples_inconsistent:
-        out.write("Inconsistent tokens (examples): {}".format(", ".join(examples_inconsistent)) + delim)
+        out.write("! Inconsistent tokens (examples): {}".format(", ".join(examples_inconsistent)) + delim)
 
     out.write("\n")
 
