@@ -1,5 +1,7 @@
 import re, sys
-from lxml import etree
+#from lxml import etree
+from xml import etree
+
 
 
 class Construction():
